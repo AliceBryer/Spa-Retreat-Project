@@ -5,12 +5,12 @@ const bcrypt = require ('bcrypt');
 const Order = require ('./Order');
 
 const userSchema = new Schema({
-    firstName: {
+    Name: {
       type: String,
       required: true,
       trim: true
     },
-    lastName: {
+   Username: {
       type: String,
       required: true,
       trim: true
