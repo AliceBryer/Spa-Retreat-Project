@@ -5,6 +5,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
+import SignUp from "./components/Signup";
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
       <Wrapper>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Wrapper>
     </Router>
