@@ -39,6 +39,8 @@ a {
 
 a:hover {
   color: #fff;
+  background-color: #e3d5ca;
+  border-radius: 5px;
   transition: all 0.2s ease-out;
 }
 /* end of header css */
@@ -59,13 +61,20 @@ a:hover {
 .welcome-msg {
   margin: auto;
   font-family: "Qwitcher Grypen", cursive;
-  font-size: 150px;
+  font-size: 120px;
 }
 /* end of homepage css */
 
 /* resposive */
 @media (max-width: 800px) {
+  .nav-list {
+    display: block;
+  }
   .homepage-pic-container {
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome-msg {
+    font-size: 80px;
   }
 }
