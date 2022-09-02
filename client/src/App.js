@@ -1,10 +1,24 @@
-import logo from "./logo.svg";
+
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Wrapper from "./components/Wrapper";
 import "./App.css";
-import React from "react";
-import Login from "./components/Login";
+
+import Header from "./components/Header";
+import Homepage from "./components/Homepage";
 
 function App() {
-  return <div></div>;
-}
+  useEffect(() => {
+    document.title = "Spa Retreat";
+  }, []);
 
-export default App;
+  return (
+    <Router>
+      <Header />
+      <Wrapper>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+      </Wrapper>
+    </Router>
+  );
