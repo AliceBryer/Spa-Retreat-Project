@@ -6,6 +6,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
+import Login from "./components/Login";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Wrapper>
     </Router>
