@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <h5>©Team Super Awesome</h5>
-      <div className="footer">
-        <ul>
+      <div className="footer-wrap">
+        <ul className="footer-list">
           <li>
             <NavLink to="/AboutUs">About Us</NavLink>
           </li>
