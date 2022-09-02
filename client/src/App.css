@@ -54,14 +54,14 @@ a:hover {
 }
 
 .welcome-pic {
-  height: 100%;
-  width: 620px;
+  height: 650px;
+  width: 460px;
 }
 
 .welcome-msg {
   margin: auto;
   font-family: "Qwitcher Grypen", cursive;
-  font-size: 120px;
+  font-size: 100px;
 }
 /* end of homepage css */
 
