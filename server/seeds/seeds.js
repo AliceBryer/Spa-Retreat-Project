@@ -1,16 +1,11 @@
 const db = require("../config/connection");
-const {} = require("../models");
-
-const spaData = require("./spa.json");
+const {Facilities, Treatments, User} = require("../models");
 
 db.once("open", async () => {
-  await Spa.deleteMany({});
-
-  const data = await Spa.insertMany(spaData);
+ await Facilities.deleteMany();
 
 
-
-const faciltiies = await facilities.insertMany([
+const faciltiies = await Facilities.insertMany([
     {
 name: 'Hydrotherapy Pool',
 description: 'Heal tired muscles whilst lowering your stress levels, in our blissful hydrotherapy pool. Swim under our massage jets, or unwind in our bubbling hot tub. ',
@@ -41,12 +36,14 @@ picture: 'https://images.unsplash.com/photo-1535312800630-1c173409799a?ixlib=rb-
 name:'Hair & Spa Boutique',
 description:'Leave our spa looking your best as a great addition to you day ',
 picture: 'https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80'.
-},
-
-
+}
 ]);
 
 console.log('Facilities Seeded');
+
+
+
+await User.deleteMany();
 
 await User.create({
     name: 'Pamela Smith',
@@ -83,17 +80,7 @@ await User.create({
  console.log('users seeded');
 
 
-
-
-
-
-
-
-
-
-
-
-  process.exit(0);
+process.exit(0);
 });
 
 
