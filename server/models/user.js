@@ -22,7 +22,7 @@ const userSchema = new Schema({
       minlength: 5
     },
     ProfilePic: {
-      type: String
+      type: String,
       required: false
     }
   });
