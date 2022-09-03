@@ -1,3 +1,4 @@
+/* css for all */
 * {
   font-family: "Nunito Sans", "Open Sans", sans-serif;
 }
@@ -23,4 +24,79 @@
 .footer-list {
   list-style: none;
   margin-right: 100px;
+}
+/* start of header css */
+.header {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  /* position: absolute; */
+  align-items: center;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.company-name {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 8px;
+  padding-left: 20px;
+}
+
+.nav-bar {
+  margin-left: auto;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  margin: 18px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #e3d5ca;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+}
+/* end of header css */
+
+/* start of homepage css */
+.homepage-pic-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.welcome-pic {
+  height: 650px;
+  width: 460px;
+}
+
+.welcome-msg {
+  margin: auto;
+  font-family: "Qwitcher Grypen", cursive;
+  font-size: 100px;
+}
+/* end of homepage css */
+
+/* resposive */
+@media (max-width: 800px) {
+  .nav-list {
+    display: block;
+  }
+  .homepage-pic-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome-msg {
+    font-size: 80px;
+  }
 }
