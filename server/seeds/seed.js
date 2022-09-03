@@ -21,7 +21,6 @@ db.once("open", async () => {
   price: '95',
   pictureurl: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80'
 },
-
 {
   name: 'Feet Massage',
   description: 'Hot to trot. Focusing on the foot and lower leg, this treatment includes exfoliation and a warm foot bath, followed by a tension relieving massage and work on your cuticles. Nails are then filed, shaped and painted in the colour of your choice, with you being able to take home the midi colour as our little treat.',
@@ -47,12 +46,47 @@ db.once("open", async () => {
   pictureurl: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZCUyMG1hc3NhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60'
 }, 
 {
-  name: 'Deluxe Mani',
+  name: 'Deluxe Manicure',
   description: 'A luxurious hand and nail treatment. Using the latest anti-ageing products, this treatment includes exfoliation and massage, followed by a nourishing mask and heated mitts. Nails are then filed, shaped and painted in the colour of your choice, with you being able to take home the midi colour as our little treat.',
   price: '55',
-  pictureurl: ''
+  pictureurl: 'https://images.unsplash.com/photo-1610992015732-2449b76344bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
+},
+{
+  name: 'Deluxe Pedicure',  
+  description: 'Hot to trot. Focusing on the foot and lower leg, this treatment includes exfoliation and a warm foot bath, followed by a tension relieving massage and work on your cuticles. Nails are then filed, shaped and painted in the colour of your choice, with you being able to take home the midi colour as our little treat.',
+  price: '55', 
+  pictureurl: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVkaWN1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60'
+},
+{
+  name: 'Cut and blowdry',
+  description: 'Put a little bounce in your barnet with a nourishing blow-dry treatment.',
+  price: '34',
+  pictureurl: 'https://images.unsplash.com/photo-1620331317312-74b88bf40907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFpciUyMGRyeWVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
+},
+{
+  name: 'Balayage',
+  descripton: 'Balayage allows for a sun-kissed, natural looking hair colour, with softer, less noticeable re-growth.',
+  price: '84',
+  pictureurl: 'https://unsplash.com/photos/W6cwaL7PMSw'
+},
+{
+  name: 'Express styling',
+  description: 'Styling primer is applied to towel-dried hair before your regular styling products.',
+  price: '17',
+  pictureurl: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGFpciUyMHNhbG9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
+},
+{
+  name:'Couples relaxing full body massage ',
+  description: 'Share a relaxing and memorable occasion providing you an opportunitiy for connecting and bonding with your loved one in a wonderful way.',
+  price: '100',
+  pictureurl: 'https://media.istockphoto.com/photos/couple-massage-at-spa-resort-beautiful-couple-getting-a-back-massage-picture-id1336348648?k=20&m=1336348648&s=612x612&w=0&h=aLzVuCJQMnA3zMxl-PBirqJkJykZLCDhZNMvXq9aq5g=',
+},
+{
+name: 'Couples pro-radiance facial',
+description: 'This facial will rejuvenate your skin. It will energise & detoxify a stressed, dull skin with a nutritional superfood boost',
+price: '100',
+pictureurl:'https://images.unsplash.com/photo-1643684391140-c5056cfd3436?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZmFjaWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
 }
-
   ]);
 
   console.log("Spa Data seeded!");
