@@ -10,22 +10,21 @@ const userSchema = new Schema({
       required: true,
       trim: true
     },
-   Username: {
+    Email: {
       type: String,
       required: true,
-      trim: true
+      unique: true,
+      match: [/.+@.+\..+/, 'Please enter a valid email address.'],
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true
-    },
-    password: {
+    Password: {
       type: String,
       required: true,
       minlength: 5
     },
-    orders: [Order.schema]
+    ProfilePic: {
+      type: String
+      required: false
+    }
   });
   
   userSchema.pre('save', async function(next) {
