@@ -49,35 +49,34 @@ picture: 'https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-
 console.log('Facilities Seeded');
 
 await User.create({
-    username: 'pam1990',
     name: 'Pamela Smith',
     email: 'pamela@testmail.com',
     password: 'password12345',
  });
  
 await User.create({
-    username: 'bobby_trent01',
     name: 'Robert Trent',
     email: 'robert.trent@testmail.com',
     password: 'password12345',
+    profilePic: 'https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000'
  });
  await User.create({
-    username: 'abbie231_x',
     name: 'Abigail Harvey',
     email: 'abih_123@testmail.com',
     password: 'password12345',
+    profilePic: 'https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000'
  });
  await User.create({
-    username: 'hannah.g_1',
     name: 'Hannah Griffiths',
     email: 'hannahg@testmail.com',
     password: 'password12345',
+    profilePic: 'https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000'
  });
  await User.create({
-    username: 'Wildman_1991',
     name: 'Gemma Wildman',
     email: 'wildgem@testmail.com',
     password: 'password12345',
+    profilePic: 'https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000'
  });
 
  
