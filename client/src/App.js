@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </Wrapper>
+      <Footer />
     </Router>
   );
 }
