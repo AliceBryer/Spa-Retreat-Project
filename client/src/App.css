@@ -65,6 +65,20 @@ a:hover {
 }
 /* end of homepage css */
 
+/* Facilities css */
+
+.facilities-card-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content: center;
+
+}
+
+.facilities-card {
+  margin:40px;
+}
+
 /* resposive */
 @media (max-width: 800px) {
   .nav-list {
