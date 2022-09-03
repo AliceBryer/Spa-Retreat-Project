@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const facilitiesSchema = new Schema({
+const WishlistSchema = new Schema({
     User: [
         {
          type:Schema.Types.UserId,
@@ -19,7 +19,7 @@ const facilitiesSchema = new Schema({
 
     });
 
-    const Order = mongoose.model('Wishlist', orderSchema);
+    const Wishlist = mongoose.model('Wishlist', wishlistSchema);
     
     module.exports = Wishlist;
     
