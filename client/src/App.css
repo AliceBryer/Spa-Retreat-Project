@@ -90,6 +90,7 @@ a:hover {
 }
 /* end of homepage css */
 
+
 /* start of wishlist css */
 .wishlist-title {
   font-family: "Times New Roman", Times, serif;
@@ -116,6 +117,21 @@ a:hover {
   justify-content: center;
 }
 /* end of wishlist css */
+
+/* Facilities css */
+
+.facilities-card-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content: center;
+
+}
+
+.facilities-card {
+  margin:40px;
+}
+
 
 /* resposive */
 @media (max-width: 800px) {
