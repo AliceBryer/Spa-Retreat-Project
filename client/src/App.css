@@ -98,7 +98,22 @@ a:hover {
 }
 
 .wishlist-card {
+  position: relative;
   margin: 25px;
+  min-width: 220px;
+  min-height: 220px;
+  background-color: #f5ebe0;
+  border: #fff;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 12px;
+}
+
+.wishlist-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /* end of wishlist css */
 
@@ -113,5 +128,9 @@ a:hover {
   }
   .welcome-msg {
     font-size: 80px;
+  }
+
+  .wishlist-container {
+    flex-direction: column;
   }
 }
