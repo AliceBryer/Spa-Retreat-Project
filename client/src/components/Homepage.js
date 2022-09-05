@@ -27,7 +27,7 @@ function Homepage() {
         <div>
           <img className="welcome-pic" src={currentImage} alt="spa pictures" />
         </div>
-        <div className="welcome-msg">Welcome to 404GetAway</div>
+        <div className="welcome-msg">Welcome</div>
       </div>
     </section>
   );

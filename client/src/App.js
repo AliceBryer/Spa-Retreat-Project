@@ -7,7 +7,9 @@ import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
+import Facilities from "./components/FacilitiesPage"
 import Footer from "./components/Footer";
+import Wishlist from "./components/Wishlist";
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/facilities" element={<Facilities />} />
         </Routes>
       </Wrapper>
       <Footer />
