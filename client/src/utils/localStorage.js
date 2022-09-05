@@ -13,3 +13,23 @@ export const saveTreatmentIds = (treatmentIdArr) => {
     localStorage.removeItem("saved_treatments");
   }
 };
+
+export const removeTreatmentId = (treatmentId) => {
+  const savedTreatmentIds = localStorage.getItem("saved_treatments")
+    ? JSON.parse(localStorage.getItem("saved_treatments"))
+    : null;
+
+  if (!savedTreatmentIds) {
+    return false;
+  }
+
+  const updatedSavedTreatmentIds = savedTreatmentIds?.filter(
+    (savedTreatmentId) => savedTreatmentId !== treatmentId
+  );
+  localStorage.setItem(
+    "saved_treatments",
+    JSON.stringify(updatedSavedTreatmentIds)
+  );
+
+  return true;
+};
