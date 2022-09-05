@@ -45,7 +45,19 @@ const Header = () => {
                 </li>
               </>
             ) : (
-              <></>
+              <>
+                {/* navbar when logged out, show longin and signup */}
+                <li className="nav-list">
+                  <NavLink as={Link} to="/Login">
+                    Login
+                  </NavLink>
+                </li>
+                <li className="nav-list">
+                  <NavLink as={Link} to="/Signup">
+                    Signup
+                  </NavLink>
+                </li>
+              </>
             )}
           </ul>
         </nav>
