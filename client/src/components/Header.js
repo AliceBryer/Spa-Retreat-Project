@@ -24,11 +24,18 @@ const Header = () => {
               <NavLink to="/Treatment">Treatment</NavLink>
             </li>
 
+            {/* Wishlist for testing purpose */}
+            <li className="nav-list">
+              <NavLink to="/Wishlist">Wishlist</NavLink>
+            </li>
             {/* navbar when logged in, show my account and basket, and logout*/}
             {Auth.loggedIn() ? (
               <>
                 <li className="nav-list">
                   <NavLink to="/MyAccount">My Account</NavLink>
+                </li>
+                <li className="nav-list">
+                  <NavLink to="/Wishlist">Wishlist</NavLink>
                 </li>
                 <li className="nav-list">
                   <NavLink to="/Basket">

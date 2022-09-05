@@ -8,6 +8,7 @@ import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import Wishlist from "./components/Wishlist";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/Wishlist" element={<Wishlist />} />
         </Routes>
       </Wrapper>
       <Footer />
