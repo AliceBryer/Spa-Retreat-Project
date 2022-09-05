@@ -19,5 +19,14 @@ type Treatment {
 type Order {
     _id: ID
     purchaseDate: String
+    treatment: [Treatment]
+}
+type User {
+    _id: ID
+    firstName: String
+    lastName: String
+    email: String
+    orders: [Order]
+  }
 ;
 module.exports = typeDefs;
