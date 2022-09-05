@@ -87,6 +87,14 @@ const Wishlist = () => {
           image="treatment.pic_url"
           alt="treament photo"
         />
+        <IconButton
+          alignItems="center"
+          aria-label="delete"
+          disabled
+          color="primary"
+        >
+          <AddShoppingCartIcon sx={{ fontSize: 25 }} />
+        </IconButton>
         <CardActions disableSpacing>
           <ExpandMore
             expand={expanded}
@@ -98,18 +106,14 @@ const Wishlist = () => {
           </ExpandMore>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <IconButton
-              alignItems="center"
-              aria-label="delete"
-              disabled
-              color="primary"
-            >
-              <AddShoppingCartIcon sx={{ fontSize: 25 }} />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <DeleteIcon sx={{ fontSize: 25 }} />
-            </IconButton>
-          </CardContent>
+          <IconButton
+            alignItems="center"
+            aria-label="delete"
+            disabled
+            color="primary"
+          >
+            <DeleteIcon sx={{ fontSize: 25 }} />
+          </IconButton>
         </Collapse>
       </Card>
     </>
