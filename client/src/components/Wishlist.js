@@ -29,4 +29,9 @@ const Wishlist = () => {
       console.error(err);
     }
   };
+
+  // if data isn't here yet
+  if (loading) {
+    return <h2>LOADING...</h2>;
+  }
 };
