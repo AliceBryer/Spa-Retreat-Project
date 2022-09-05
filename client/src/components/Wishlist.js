@@ -1,44 +1,12 @@
+import React from "react";
+
 import Auth from "../utils/auth";
-import { removeTreatmentId } from "../utils/localStorage";
+import { removeTreatmentId, saveTreatmentIds } from "../utils/localStorage";
 
 import { useQuery, useMutation } from "@apollo/client";
 // name of the functions to be edited after getting the code from backend team
 import { GET_USER } from "../utils/queries";
 import { DEL_WISHLIST } from "../utils/mutations";
-
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import DeleteIcon from "@mui/icons-material/Delete";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-  marginLeft: "auto",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
 
 const Wishlist = () => {
   //   const { loading, data } = useQuery(GET_USER);
@@ -79,43 +47,29 @@ const Wishlist = () => {
       <div>
         <h2 className="wishlist-title">WISHLIST</h2>
       </div>
-      <Card sx={{ maxWidth: 345 }} className="wishlist-card">
-        <CardHeader subheader="treatment.name" />
-        <CardMedia
-          component="img"
-          height="194"
-          image="treatment.pic_url"
-          alt="treament photo"
-        />
-        <IconButton
-          alignItems="center"
-          aria-label="delete"
-          disabled
-          color="primary"
+      <div className="wishlist-container">
+        {/* {userData.savedTreatments.map((treatment) => { */}
+        {/* return ( */}
+        <div
+          // key={treatment.treatmentId}
+          class="wishlist-card"
         >
-          <AddShoppingCartIcon sx={{ fontSize: 25 }} />
-        </IconButton>
-        <CardActions disableSpacing>
-          <ExpandMore
-            expand={expanded}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </ExpandMore>
-        </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <IconButton
-            alignItems="center"
-            aria-label="delete"
-            disabled
-            color="primary"
-          >
-            <DeleteIcon sx={{ fontSize: 25 }} />
-          </IconButton>
-        </Collapse>
-      </Card>
+          <img
+            class="treatment-img"
+            src=""
+            // check with the treatment model
+            // {treatment.pic_url}
+            // alt={`photo for ${treatment.name}`}
+          />
+          <h5 class="treatment-name">
+            treatment name
+            {/* check with the treatment model */}
+            {/* {treatment.name} */}
+          </h5>
+        </div>
+        );
+        {/* })} */}
+      </div>
     </>
   );
 };
