@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,19 +13,15 @@ const Header = () => {
         <nav>
           <ul>
             <li className="nav-list">
-              <NavLink as={Link} to="/">
+              <NavLink to="/">
                 <FontAwesomeIcon icon={faHome} />
               </NavLink>
             </li>
             <li className="nav-list">
-              <NavLink as={Link} to="/Facilities">
-                Facilities
-              </NavLink>
+              <NavLink to="/Facilities">Facilities</NavLink>
             </li>
             <li className="nav-list">
-              <NavLink as={Link} to="/Treatment">
-                Treatment
-              </NavLink>
+              <NavLink to="/Treatment">Treatment</NavLink>
             </li>
 
             {/* navbar when logged in, show my account and basket, and logout*/}
@@ -48,14 +44,10 @@ const Header = () => {
               <>
                 {/* navbar when logged out, show longin and signup */}
                 <li className="nav-list">
-                  <NavLink as={Link} to="/Login">
-                    Login
-                  </NavLink>
+                  <NavLink to="/Login">Login</NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink as={Link} to="/Signup">
-                    Signup
-                  </NavLink>
+                  <NavLink to="/Signup">Signup</NavLink>
                 </li>
               </>
             )}
