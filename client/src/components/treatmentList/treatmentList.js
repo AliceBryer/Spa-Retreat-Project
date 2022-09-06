@@ -1,11 +1,11 @@
 import React from 'react';
-import treatmentItem from '../treatmentItem/treatmentItem';
+import TreatmentItem from '../treatmentItem/treatmentItem';
 
 
 function treatmentList() {
 return (
     <div>
-    <treatmentItem/>
+    <TreatmentItem/>
     </div>
 )};
 

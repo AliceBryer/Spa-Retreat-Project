@@ -8,11 +8,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-// replace placeholder function with add to wishlist functionality
+// eventually replace/extract placeholder function with add to wishlist functionality
 const wishlistPlaceholder = () => {
   console.log('wishlist button press successful')
 }
-// replace placeholder function with add to cart functionality
+// eventually replace/extract  placeholder function with add to cart functionality
 const cartPlaceholder = () => {
   console.log('cart button press successful')
 }
