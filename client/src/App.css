@@ -2,6 +2,11 @@
 * {
   font-family: "Nunito Sans", "Open Sans", sans-serif;
 }
+.title {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  letter-spacing: 3px;
+}
 
 /* start of header css */
 .header {
@@ -91,13 +96,42 @@ a:hover {
 /* end of homepage css */
 
 
-/* start of wishlist css */
-.wishlist-title {
-  font-family: "Times New Roman", Times, serif;
-  text-align: center;
-  letter-spacing: 3px;
+/* treatment-item css */
+.treatment-item-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content: center;
+  margin: 20px;
 }
 
+.single-treatment-item {
+  margin:50px;
+  box-shadow: grey 6px 6px;
+}
+
+.treatment-image {
+  height:250px;
+}
+
+.heart-icon {
+  margin-left:8px;
+}
+
+.cart-icon {
+  margin-left:8px;
+}
+
+.heart-icon:hover {
+  color:red
+}
+
+.cart-icon:hover {
+  color: rgb(3, 3, 117)
+}
+
+
+/* start of wishlist css */
 .wishlist-card {
   position: relative;
   margin: 25px;
@@ -122,16 +156,14 @@ a:hover {
 
 .facilities-card-container {
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-
 }
 
 .facilities-card {
-  margin:40px;
+  margin: 40px;
 }
-
 
 /* resposive */
 @media (max-width: 800px) {

@@ -45,7 +45,7 @@ const Wishlist = () => {
   return (
     <>
       <div>
-        <h2 className="wishlist-title">WISHLIST</h2>
+        <h2 className="title">WISHLIST</h2>
       </div>
       <div className="wishlist-container">
         {/* {userData.savedTreatments.map((treatment) => { */}
