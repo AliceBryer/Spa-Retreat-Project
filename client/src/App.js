@@ -9,10 +9,11 @@ import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import Facilities from "./components/FacilitiesPage";
 import Footer from "./components/Footer";
-import Treatment from "./components/treatmentList/treatmentList"
+import Treatment from "./components/treatmentList/treatmentList";
 import Wishlist from "./components/Wishlist";
 import About from "./components/About";
 import AboutUs from "./components/AboutUs";
+import MyAccount from "./components/MyAccount";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/About" element={<About />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </Wrapper>
       <Footer />
