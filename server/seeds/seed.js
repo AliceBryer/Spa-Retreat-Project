@@ -99,7 +99,7 @@ pictureurl:'https://images.unsplash.com/photo-1643684391140-c5056cfd3436?ixlib=r
   await facilities.deleteMany();
 
 
-  const faciltiies = await Facilities.insertMany([
+  const facilities = await Facilities.insertMany([
       {
   name: 'Hydrotherapy Pool',
   description: 'Heal tired muscles whilst lowering your stress levels, in our blissful hydrotherapy pool. Swim under our massage jets, or unwind in our bubbling hot tub. ',
