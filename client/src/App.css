@@ -103,7 +103,19 @@ a:hover {
 
 .single-treatment-item {
   margin:50px;
-  box-shadow: grey 5px 5px;
+  box-shadow: grey 6px 6px;
+}
+
+.treatment-image {
+  height:250px;
+}
+
+.heart-icon {
+  margin-left:8px;
+}
+
+.cart-icon {
+  margin-left:8px;
 }
 
 .heart-icon:hover {
@@ -111,7 +123,7 @@ a:hover {
 }
 
 .cart-icon:hover {
-  color: red
+  color: rgb(3, 3, 117)
 }
 
 

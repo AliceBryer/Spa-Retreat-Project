@@ -26,21 +26,21 @@ const cartPlaceholder = () => {
     <div className='treatment-item-container'>
         <div className='single-treatment-item'>
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia 
+      <CardMedia className='treatment-image'
         component="img"
         height="140"
         image="https://www.aquasana.co.uk/treatments/massage-treatments/elemis-freestyle-deep-tissue-massage-55/_jcr_content/image.coreimg.jpeg/1648568526465/aqua-sana-mens-ultimate-back-revival.jpeg"
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography className='treatment-title' gutterBottom variant="h5" component="div" >
           Full Body Massage
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography className='treatment-description' variant="body2" color="text.secondary">
           A head-to-toe deep tissue massage to leave you feeling the most relaxed you've ever been.
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className='icon-buttons'>
         <Button size="small"onClick={wishlistPlaceholder} > Add to wishlist  <FontAwesomeIcon className='heart-icon' icon={faHeart} /> </Button>
         <Button size="small" onClick={cartPlaceholder} >Add to Basket <FontAwesomeIcon className='cart-icon' icon={faCartShopping} /> </Button>
       </CardActions>
