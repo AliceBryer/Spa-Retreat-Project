@@ -8,28 +8,35 @@ import {
   Typography,
 } from "@material-ui/core";
 import Button from "@mui/material/Button";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const useStyles = makeStyles((theme) => ({
   text: {
     margin: theme.spacing(0, 0, 0.5),
   },
   avatar: {
-    verticalAlign: "middle",
+    verticalAlign: "left",
     marginRight: theme.spacing(0.5),
   },
   large: {
-    width: theme.spacing(25),
-    height: theme.spacing(25),
+    alignItems: "center",
+    width: theme.spacing(30),
+    height: theme.spacing(30),
     margin: theme.spacing(2, 2, 0),
   },
+  container: {
+    height: "84vh",
+  },
 }));
+
+const handleButtonClick = () => {
+  console.log("clicked");
+};
 
 export default function UserCard(props) {
   const classes = useStyles();
 
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" className={classes.container}>
       <CardMedia align="center">
         <Avatar
           alt="Remy Sharp"
@@ -37,7 +44,7 @@ export default function UserCard(props) {
           className={classes.large}
         />
       </CardMedia>
-      <CardContent>
+      <CardContent align="left">
         <Typography
           className={classes.text}
           color="textSecondary"
@@ -60,15 +67,14 @@ export default function UserCard(props) {
           variant="h6"
           align="center"
         >
-          <AlternateEmailIcon className={classes.avatar} fontSize="small" />
-          {props?.content?.email}
-          {"mohamed@test.com"}
+          {"Email: Mohamed@test.com "}
         </Typography>
         <Button
           fullWidth
           variant="contained"
           sx={{ mt: 2, mb: 2 }}
           color="error"
+          onClick={handleButtonClick}
         >
           Delete Account
         </Button>
