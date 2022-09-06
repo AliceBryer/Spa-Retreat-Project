@@ -8,7 +8,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const AboutUs = () => {
   return (
     <div id="model4">
-      <h1 className="model-title">Team Model 4</h1>
       <div className="divider"></div>
       <div className="members">
         <div className="member">
@@ -30,7 +29,7 @@ const AboutUs = () => {
         <div className="member">
           <img width={200} height={200} src={massage} />
           <div className="description">
-            <h1>Omar Nadir</h1>
+            <h1>Alice Bryer</h1>
             <h2>CEO</h2>
             <p>
               Consectetuer adipiscing elit, sed diam nonummy nibh euismod
@@ -46,7 +45,7 @@ const AboutUs = () => {
         <div className="member">
           <img width={200} height={200} src={diffuser} />
           <div className="description">
-            <h1>Khaled MAHER</h1>
+            <h1>Anfal Ali</h1>
             <h2>CEO</h2>
             <p>
               Consectetuer adipiscing elit, sed diam nonummy nibh euismod
