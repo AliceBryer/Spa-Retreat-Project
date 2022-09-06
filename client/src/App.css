@@ -106,6 +106,14 @@ a:hover {
   box-shadow: grey 5px 5px;
 }
 
+.heart-icon:hover {
+  color:red
+}
+
+.cart-icon:hover {
+  color: red
+}
+
 
 
 

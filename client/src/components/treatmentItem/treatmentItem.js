@@ -7,6 +7,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faHeart, faCartShopping} from "@fortawesome/free-solid-svg-icons";
+
 
 // eventually replace/extract placeholder function with add to wishlist functionality
 const wishlistPlaceholder = () => {
@@ -38,8 +41,8 @@ const cartPlaceholder = () => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"onClick={wishlistPlaceholder} >Add to Wishlist </Button>
-        <Button size="small" onClick={cartPlaceholder} >Add to Basket </Button>
+        <Button size="small"onClick={wishlistPlaceholder} > Add to wishlist  <FontAwesomeIcon className='heart-icon' icon={faHeart} /> </Button>
+        <Button size="small" onClick={cartPlaceholder} >Add to Basket <FontAwesomeIcon className='cart-icon' icon={faCartShopping} /> </Button>
       </CardActions>
     </Card>
     </div>
