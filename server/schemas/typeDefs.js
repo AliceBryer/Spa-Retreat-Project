@@ -12,7 +12,7 @@ type User {
 type Order {
         _id: ID
         purchaseDate: String
-        products: [Product]
+        treatment: [Treatment]
       }
 
 type Facilities {
