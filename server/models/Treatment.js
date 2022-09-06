@@ -13,7 +13,7 @@ const TreatmentSchema = new Schema({
     required: true,
     min: 0.99,
   },
-  imageURL: {
+  pictureurl: {
     type: String,
     required: true,
   },
@@ -24,6 +24,6 @@ const TreatmentSchema = new Schema({
   },
 });
 
-const Treatment = mongoose.model("Treatment", TreatmentSchema);
+const Treatments = mongoose.model("Treatment", TreatmentSchema);
 
-module.exports = Treatment;
+module.exports = Treatments;

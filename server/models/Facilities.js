@@ -8,11 +8,11 @@ const facilitiesSchema = new Schema({
     required: true,
     trim: true,
   },
-  imageURL: {
+  pictureURL: {
     type: String,
   },
 });
 
-const Product = mongoose.model("Facilities", facilitiesSchema);
+const Facilities = mongoose.model("Facilities", facilitiesSchema);
 
 module.exports = Facilities;
