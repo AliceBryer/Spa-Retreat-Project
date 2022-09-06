@@ -87,6 +87,26 @@ a:hover {
 }
 /* end of homepage css */
 
+
+
+
+
+/* treatment-item css */
+
+.treatment-item-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content: center;
+  margin: 20px;
+}
+
+.single-treatment-item {
+  margin:50px;
+
+}
+
+
 /* resposive */
 @media (max-width: 800px) {
   .nav-list {
