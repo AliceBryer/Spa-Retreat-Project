@@ -45,6 +45,96 @@ a:hover {
 }
 /* end of header css */
 
+/* start of abousus css */
+#model4 .member {
+  margin: 20px 15px;
+  width: 350px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#model4 .member:hover {
+  transform: scale(1.01);
+}
+
+#model4 .description {
+  background-color: #fff;
+  width: 350px;
+  height: 450px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  transition: all 1s;
+}
+
+#model4 .description:hover {
+  background-color: rgba(8, 61, 119, 0.2);
+}
+
+#model4 img {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(8, 61, 119);
+}
+
+#model4 .social-media {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(8, 61, 119);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#model4 .social-media svg {
+  display: block;
+  width: 33%;
+  height: 100%;
+  font-size: 20px !important;
+  background-color: rgba(8, 61, 119);
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  color: #fff;
+  transition: all 1s;
+}
+
+#model4 .social-media svg:hover {
+  background-color: red;
+}
+
+#model4 .description h1 {
+  color: rgba(8, 61, 119);
+}
+
+#model4 .description h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #f21b3f;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#model4 .description p {
+  color: rgba(8, 61, 119);
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* end of aboutus css */
+
 /* start of footer css */
 .footer {
   display: flex;
@@ -90,7 +180,6 @@ a:hover {
 }
 /* end of homepage css */
 
-
 /* start of wishlist css */
 .wishlist-title {
   font-family: "Times New Roman", Times, serif;
@@ -122,16 +211,14 @@ a:hover {
 
 .facilities-card-container {
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-
 }
 
 .facilities-card {
-  margin:40px;
+  margin: 40px;
 }
-
 
 /* resposive */
 @media (max-width: 800px) {
