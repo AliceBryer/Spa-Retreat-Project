@@ -22,6 +22,14 @@ type Facilities {
         pictureurl: String
         price: Float
 }      
+type Treatments {
+  _id: ID
+  name: String
+  description: String
+  pictureurl: String
+  price: Float
+  quantity: Integer
+}   
 `;
 
 
