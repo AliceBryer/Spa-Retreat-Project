@@ -1,7 +1,7 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-type User {
+  type User {
     _id: ID
     firstName: String
     lastName: String
@@ -9,28 +9,26 @@ type User {
     orders: [Order]
   }
 
-type Order {
-        _id: ID
-        purchaseDate: String
-        treatment: [Treatment]
-      }
+  type Order {
+    _id: ID
+    purchaseDate: String
+    treatment: [Treatment]
+  }
 
-type Facilities {
-        _id: ID
-        name: String
-        description: String
-        pictureurl: String
-        price: Float
-}      
-type Treatments {
-  _id: ID
-  name: String
-  description: String
-  pictureurl: String
-  price: Float
-  quantity: Integer
-}   
+  type Facilities {
+    _id: ID
+    name: String
+    description: String
+    pictureURL: String
+    price: Float
+  }
+  type Treatments {
+    _id: ID
+    name: String
+    description: String
+    pictureURL: String
+    price: Float
+  }
 `;
-
 
 module.exports = typeDefs;
