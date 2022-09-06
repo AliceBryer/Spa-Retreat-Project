@@ -103,8 +103,10 @@ a:hover {
 
 .single-treatment-item {
   margin:50px;
-
+  box-shadow: grey 5px 5px;
 }
+
+
 
 
 /* resposive */

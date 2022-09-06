@@ -8,7 +8,7 @@ import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
-import Treatment from "./components/TreatmentPage"
+import Treatment from "./components/treatmentList/treatmentList"
 
 function App() {
   useEffect(() => {
