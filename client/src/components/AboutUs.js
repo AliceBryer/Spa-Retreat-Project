@@ -46,7 +46,6 @@ const AboutUs = () => {
           <img width={200} height={200} src={diffuser} />
           <div className="description">
             <h1>Anfal Ali</h1>
-            <h2>CEO</h2>
             <p>
               Consectetuer adipiscing elit, sed diam nonummy nibh euismod
               tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor
