@@ -65,7 +65,7 @@ const resolvers = {
         const price = await stripe.prices.create({
           treatment: treatment.id,
           unit_amount: treatments[i].price * 100,
-          currency: "AUD",
+          currency: "GBP",
         });
 
         line_items.push({
