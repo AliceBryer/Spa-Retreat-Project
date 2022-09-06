@@ -6,12 +6,11 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 
 const AboutUs = () => {
   return (
-    <div id="model4">
-      <h1 className="model-title">Team Model 4</h1>
+    <div id="model5">
       <div className="divider"></div>
       <div className="members">
         <div className="member">
-          <img width={200} height={200} src={Member1} />
+          <img width={400} src={""} />
           <div className="description">
             <h1>Ahmed ALAMI</h1>
             <h2>CEO</h2>
@@ -28,7 +27,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="member">
-          <img width={200} height={200} src={Member2} />
+          <img width={400} src={""} />
           <div className="description">
             <h1>Omar Nadir</h1>
             <h2>CEO</h2>
@@ -45,7 +44,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="member">
-          <img width={200} height={200} src={Member3} />
+          <img width={400} src={""} />
           <div className="description">
             <h1>Khaled MAHER</h1>
             <h2>CEO</h2>
