@@ -2,6 +2,11 @@
 * {
   font-family: "Nunito Sans", "Open Sans", sans-serif;
 }
+.title {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  letter-spacing: 3px;
+}
 
 /* start of header css */
 .header {
@@ -181,12 +186,6 @@ a:hover {
 /* end of homepage css */
 
 /* start of wishlist css */
-.wishlist-title {
-  font-family: "Times New Roman", Times, serif;
-  text-align: center;
-  letter-spacing: 3px;
-}
-
 .wishlist-card {
   position: relative;
   margin: 25px;

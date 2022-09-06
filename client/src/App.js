@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Facilities from "./components/FacilitiesPage";
 import Footer from "./components/Footer";
 import Wishlist from "./components/Wishlist";
+import About from "./components/About";
 import AboutUs from "./components/AboutUs";
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/facilities" element={<Facilities />} />
-          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
       </Wrapper>
       <Footer />
