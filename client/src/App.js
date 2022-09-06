@@ -13,6 +13,7 @@ import Treatment from "./components/treatmentList/treatmentList";
 import Wishlist from "./components/Wishlist";
 import About from "./components/About";
 import AboutUs from "./components/AboutUs";
+import MyAccount from "./components/MyAccount";
 
 function App() {
   useEffect(() => {
