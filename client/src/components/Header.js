@@ -53,9 +53,6 @@ const Header = () => {
                 <li className="nav-list">
                   <NavLink to="/Login">Login</NavLink>
                 </li>
-                <li className="nav-list">
-                  <NavLink to="/Signup">Signup</NavLink>
-                </li>
               </>
             )}
           </ul>
