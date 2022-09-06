@@ -67,7 +67,7 @@ const Wishlist = () => {
             {/* {treatment.name} */}
           </h5>
         </div>
-        );
+        {/* ); */}
         {/* })} */}
       </div>
     </>
