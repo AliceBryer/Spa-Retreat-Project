@@ -136,7 +136,7 @@ a:hover {
   position: relative;
   margin: 25px;
   width: 300px;
-  height: 280px;
+  height: 320px;
   background-color: #f5ebe0;
   border: #fff;
   border-style: solid;
@@ -162,6 +162,17 @@ a:hover {
   padding-left: 10px;
   letter-spacing: 2px;
   text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn {
+  margin-left: 2px;
 }
 /* end of wishlist css */
 
