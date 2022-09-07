@@ -75,6 +75,14 @@ const Wishlist = () => {
     <>
       <div>
         <h2 className="title">WISHLIST</h2>
+        {/* sub-title for wishlist, indicate how many items */}
+        {/* <h5>
+          {userData.savedTreatments.length
+            ? `Viewing ${userData.savedTreatments.length} saved ${
+                userData.savedTreatments.length === 1 ? "treatment" : "treatments"
+              }:`
+            : "You have no saved treatments!"}
+        </h5> */}
       </div>
       <div className="wishlist-container">
         {/* {userData.savedTreatments.map((treatment) => { */}
