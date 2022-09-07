@@ -7,6 +7,7 @@
   text-align: center;
   letter-spacing: 3px;
 }
+/* end of css for all */
 
 /* start of header css */
 .header {
@@ -95,48 +96,47 @@ a:hover {
 }
 /* end of homepage css */
 
-
-/* treatment-item css */
+/* start of treatment-item css */
 .treatment-item-container {
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   margin: 20px;
 }
 
 .single-treatment-item {
-  margin:50px;
+  margin: 50px;
   box-shadow: grey 6px 6px;
 }
 
 .treatment-image {
-  height:250px;
+  height: 250px;
 }
 
 .heart-icon {
-  margin-left:8px;
+  margin-left: 8px;
 }
 
 .cart-icon {
-  margin-left:8px;
+  margin-left: 8px;
 }
 
 .heart-icon:hover {
-  color:red
+  color: red;
 }
 
 .cart-icon:hover {
-  color: rgb(3, 3, 117)
+  color: rgb(3, 3, 117);
 }
-
+/* end of treatment-item css */
 
 /* start of wishlist css */
 .wishlist-card {
   position: relative;
   margin: 25px;
-  min-width: 220px;
-  min-height: 220px;
+  width: 300px;
+  height: 280px;
   background-color: #f5ebe0;
   border: #fff;
   border-style: solid;
@@ -149,6 +149,19 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.treatment-img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.treatment-name {
+  padding-left: 10px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 /* end of wishlist css */
 
