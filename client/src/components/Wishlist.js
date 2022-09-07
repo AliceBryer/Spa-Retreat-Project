@@ -35,11 +35,20 @@ const Wishlist = () => {
   //     return <h2>LOADING...</h2>;
   //   }
 
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const dummyData = [
+    {
+      name: "treatment A",
+      description: "abcdefg",
+      picture:
+        "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3BhJTIwdHJlYXRtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+    },
+    {
+      name: "treatment B",
+      description: "hijklmno",
+      picture:
+        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3BhJTIwdHJlYXRtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+    },
+  ];
 
   // hard-coded for testing
   return (
@@ -49,26 +58,25 @@ const Wishlist = () => {
       </div>
       <div className="wishlist-container">
         {/* {userData.savedTreatments.map((treatment) => { */}
-        {/* return ( */}
-        <div
-          // key={treatment.treatmentId}
-          class="wishlist-card"
-        >
-          <img
-            class="treatment-img"
-            src=""
-            // check with the treatment model
-            // {treatment.pic_url}
-            // alt={`photo for ${treatment.name}`}
-          />
-          <h5 class="treatment-name">
-            treatment name
-            {/* check with the treatment model */}
-            {/* {treatment.name} */}
-          </h5>
-        </div>
-        {/* ); */}
-        {/* })} */}
+        {dummyData.map((treatment) => {
+          return (
+            <div
+              // key={treatment.treatmentId}
+              class="wishlist-card"
+            >
+              <img
+                class="treatment-img"
+                src={treatment.picture}
+                // check with the treatment model
+                alt={`photo for ${treatment.name}`}
+              />
+              <h5 class="treatment-name">
+                {/* check with the treatment model */}
+                {treatment.name}: {treatment.description}
+              </h5>
+            </div>
+          );
+        })}
       </div>
     </>
   );
