@@ -96,6 +96,7 @@ a:hover {
 }
 /* end of homepage css */
 
+
 /* start of treatment-item css */
 .treatment-item-container {
   display: flex;
@@ -110,7 +111,16 @@ a:hover {
   box-shadow: grey 6px 6px;
 }
 
+.treatment-card-content {
+  max-height: 700px;
+}
+
 .treatment-image {
+  object-fit: cover;
+}
+
+.treatment-price {
+  font-size: 500;
   height: 250px;
 }
 
@@ -187,6 +197,11 @@ a:hover {
 
 .facilities-card {
   margin: 40px;
+  margin-bottom: 70px;
+}
+
+.facilities-card-content {
+  height: 100px;
 }
 
 /* resposive */
