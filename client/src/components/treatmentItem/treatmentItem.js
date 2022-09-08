@@ -135,7 +135,7 @@ const treatmentItem = () => {
           <CardMedia
             className="treatment-image"
             component="img"
-            height="140"
+            height="340"
             image={item.pictureURL}
             alt={item.name}
           />
@@ -156,7 +156,7 @@ const treatmentItem = () => {
               {item.description}
             </Typography>
             <Typography
-              className="treatment-description"
+              className="treatment-price"
               variant="body2"
               color="text.secondary"
             >
