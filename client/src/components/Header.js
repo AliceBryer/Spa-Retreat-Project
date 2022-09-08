@@ -28,6 +28,10 @@ const Header = () => {
             <li className="nav-list">
               <NavLink to="/wishlist">Wishlist</NavLink>
             </li>
+
+            <li className="nav-list">
+              <NavLink to="/aboutus">Contributors</NavLink>
+            </li>
             {/* navbar when logged in, show my account and basket, and logout*/}
             {Auth.loggedIn() ? (
               <>
