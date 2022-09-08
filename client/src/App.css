@@ -103,19 +103,26 @@ a:hover {
   justify-content: center;
   margin: 20px;
 }
-
-.treatment-item-container:hover .treatment-description {
-  display: block;
+.card {
+  max-height: 700px;
 }
+
+/* .treatment-item-container:hover .treatment-description {
+  display: block;
+} */
 
 .single-treatment-item {
   margin: 50px;
   box-shadow: grey 6px 6px;
 }
 
-.treatment-description {
-  display: none;
+.treatment-card-content {
+  max-height: 700px;
 }
+
+/* .treatment-description {
+  display: none;
+} */
 
 .treatment-image {
   object-fit: cover;
@@ -173,6 +180,11 @@ a:hover {
 
 .facilities-card {
   margin: 40px;
+  margin-bottom: 70px;
+}
+
+.facilities-card-content {
+  height: 100px;
 }
 
 /* resposive */

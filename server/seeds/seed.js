@@ -86,7 +86,8 @@ db.once("open", async () => {
       descripton:
         "Balayage allows for a sun-kissed, natural looking hair colour, with softer, less noticeable re-growth.",
       price: "84",
-      pictureURL: "https://unsplash.com/photos/W6cwaL7PMSw",
+      pictureURL:
+        "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     },
     {
       name: "Express styling",
@@ -160,7 +161,7 @@ db.once("open", async () => {
     {
       name: "Hair & Spa Boutique",
       description:
-        "Leave our spa looking your best as a great addition to you day ",
+        "Leave our spa looking your best as a great addition to your day. ",
       picture:
         "https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80",
     },

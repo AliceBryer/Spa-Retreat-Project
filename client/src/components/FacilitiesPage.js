@@ -16,7 +16,7 @@ const dummyData = [
   {
     name: "Hair & Spa Boutique",
     description:
-      "Leave our spa looking your best as a great addition to you day ",
+      "Leave our spa looking your best as a great addition to your day ",
     pictureURL:
       "https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80",
   },
@@ -59,11 +59,11 @@ const ActionAreaCard = () => {
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height="240"
               image={item.pictureURL}
               alt={item.name}
             />
-            <CardContent>
+            <CardContent className="facilities-card-content">
               <Typography gutterBottom variant="h5" component="div">
                 {item.name}
               </Typography>
