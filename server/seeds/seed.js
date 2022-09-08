@@ -17,7 +17,6 @@ db.once("open", async () => {
       pictureURL:
         "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     },
-
     {
       name: "Head, Neck and Shoulders",
       description: "Deep Tissue Full Body Massage",
