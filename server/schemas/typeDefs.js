@@ -12,7 +12,7 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
-    treatment: [Treatment]
+    treatments: [Treatments]
   }
 
   type Facilities {
@@ -28,6 +28,20 @@ const typeDefs = gql`
     description: String
     pictureURL: String
     price: Float
+  }
+
+  type Auth {
+    token: ID!
+    user: User
+  }
+
+  type Query {
+    me: User
+  }
+
+  type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, password: String!): Auth
   }
 `;
 

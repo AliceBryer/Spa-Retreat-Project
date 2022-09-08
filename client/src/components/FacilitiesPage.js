@@ -77,7 +77,14 @@ const ActionAreaCard = () => {
     );
   });
 
-  return <div className="facilities-card-container">{cards}</div>;
+  return (
+    <>
+      <div>
+        <h2 className="title">FACILITIES</h2>
+      </div>
+      <div className="facilities-card-container">{cards}</div>
+    </>
+  );
 };
 
 export default ActionAreaCard;

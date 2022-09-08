@@ -7,6 +7,7 @@
   text-align: center;
   letter-spacing: 3px;
 }
+/* end of css for all */
 
 /* start of header css */
 .header {
@@ -95,7 +96,8 @@ a:hover {
 }
 /* end of homepage css */
 
-/* treatment-item css */
+
+/* start of treatment-item css */
 .treatment-item-container {
   display: flex;
   flex-wrap: wrap;
@@ -119,6 +121,7 @@ a:hover {
 
 .treatment-price {
   font-size: 500;
+  height: 250px;
 }
 
 .heart-icon {
@@ -136,13 +139,14 @@ a:hover {
 .cart-icon:hover {
   color: rgb(3, 3, 117);
 }
+/* end of treatment-item css */
 
 /* start of wishlist css */
 .wishlist-card {
   position: relative;
   margin: 25px;
-  min-width: 220px;
-  min-height: 220px;
+  width: 300px;
+  height: 320px;
   background-color: #f5ebe0;
   border: #fff;
   border-style: solid;
@@ -155,6 +159,30 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.treatment-img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.treatment-name {
+  padding-left: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn {
+  margin-left: 2px;
 }
 /* end of wishlist css */
 
