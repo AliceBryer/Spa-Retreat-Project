@@ -103,13 +103,6 @@ a:hover {
   justify-content: center;
   margin: 20px;
 }
-.card {
-  max-height: 700px;
-}
-
-/* .treatment-item-container:hover .treatment-description {
-  display: block;
-} */
 
 .single-treatment-item {
   margin: 50px;
@@ -119,10 +112,6 @@ a:hover {
 .treatment-card-content {
   max-height: 700px;
 }
-
-/* .treatment-description {
-  display: none;
-} */
 
 .treatment-image {
   object-fit: cover;
