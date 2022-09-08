@@ -8,6 +8,10 @@ const facilitiesSchema = new Schema({
     required: true,
     trim: true,
   },
+  description: {
+    type: String,
+    required: true,
+  },
   pictureURL: {
     type: String,
   },
