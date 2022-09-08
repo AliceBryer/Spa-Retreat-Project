@@ -10,14 +10,14 @@ const dummyData = [
     name: "Snooze Room",
     description:
       "Featuring atmospheric lighting and tranquil energy, the water beds are the ideal spots to truly switch off and unwind in silence.",
-    picture:
+    pictureURL:
       "https://images.unsplash.com/photo-1535312800630-1c173409799a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     name: "Hair & Spa Boutique",
     description:
       "Leave our spa looking your best as a great addition to you day ",
-    picture:
+    pictureURL:
       "https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80",
   },
   {
@@ -60,8 +60,8 @@ const ActionAreaCard = () => {
             <CardMedia
               component="img"
               height="140"
-              image={item.picture}
-              alt="green iguana"
+              image={item.pictureURL}
+              alt={item.name}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

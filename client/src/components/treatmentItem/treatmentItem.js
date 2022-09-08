@@ -136,8 +136,8 @@ const treatmentItem = () => {
             className="treatment-image"
             component="img"
             height="140"
-            image="https://www.aquasana.co.uk/treatments/massage-treatments/elemis-freestyle-deep-tissue-massage-55/_jcr_content/image.coreimg.jpeg/1648568526465/aqua-sana-mens-ultimate-back-revival.jpeg"
-            alt="green iguana"
+            image={item.pictureURL}
+            alt={item.name}
           />
           <CardContent>
             <Typography
@@ -146,15 +146,21 @@ const treatmentItem = () => {
               variant="h5"
               component="div"
             >
-              Full Body Massage
+              {item.name}
             </Typography>
             <Typography
               className="treatment-description"
               variant="body2"
               color="text.secondary"
             >
-              A head-to-toe deep tissue massage to leave you feeling the most
-              relaxed you've ever been.
+              {item.description}
+            </Typography>
+            <Typography
+              className="treatment-description"
+              variant="body2"
+              color="text.secondary"
+            >
+              £{item.price}.00
             </Typography>
           </CardContent>
           <CardActions className="icon-buttons">
