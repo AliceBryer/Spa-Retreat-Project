@@ -51,11 +51,11 @@ export const QUERY_FACILITIES = gql`
   }
 `;
 
-export const QUERY_ORDERS = gql`
-  query getOrders {
-    orders {
-// to be done
-      }
-    }
-  }
-`;
+// export const QUERY_ORDERS = gql`
+//   query getOrders {
+//     orders {
+// // to be done
+//       }
+//     }
+//   }
+// `;

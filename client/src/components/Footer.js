@@ -1,19 +1,43 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="https://mui.com/">
+        404 GetAway
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
 function Footer() {
   return (
-    <footer className="footer">
-      <h5>©Team Super Awesome</h5>
-      <div className="footer-wrap">
-        <ul className="footer-list">
-          <li>
-            <NavLink to="/AboutUs">About Us</NavLink>
-            <NavLink to="/About">About</NavLink>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <Box
+      component="footer"
+      sx={{
+        py: 1,
+        px: 2,
+        mt: "auto",
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+      }}
+    >
+      <Container maxWidth="sm">
+        <Typography variant="body1"></Typography>
+        <Copyright />
+      </Container>
+    </Box>
   );
 }
 export default Footer;
