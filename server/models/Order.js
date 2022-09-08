@@ -14,12 +14,10 @@ const orderSchema = new Schema({
       ref: "Treatments",
     },
   ],
-  user: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-    },
-  ],
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 const Order = mongoose.model("Order", orderSchema);
