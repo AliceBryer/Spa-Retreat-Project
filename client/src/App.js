@@ -31,8 +31,8 @@ function App() {
           <Route path="/treatment" element={<Treatment />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/facilities" element={<Facilities />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </Wrapper>
