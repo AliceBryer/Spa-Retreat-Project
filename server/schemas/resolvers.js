@@ -10,31 +10,114 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-  },
-  Mutation: {
-    addUser: async (parent, { name, email, password }) => {
-      const user = await User.create({ name, email, password });
-      const token = signToken(user);
-      return { token, user };
+    facilities: async () => {
+      return await facilities.find();
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    treatments: async (parent, { facilities, name }) => {
+      const params = {};
 
-      if (!user) {
-        throw new AuthenticationError("No user found with this email address");
+      if (facilities) {
+        params.facilities = facilities;
       }
 
-      const correctPw = await user.isCorrectPassword(password);
-
-      if (!correctPw) {
-        throw new AuthenticationError("Incorrect credentials");
+      if (name) {
+        params.name = {
+          $regex: name,
+        };
       }
 
-      const token = signToken(user);
+      return await treatment.find(params).populate("facilities");
+    },
+    treatment: async (parent, { _id }) => {
+      return await treatment.findById(_id).populate("facilities");
+    },
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: "orders.treatments",
+          populate: "facilities",
+        });
 
-      return { token, user };
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
+    order: async (parent, { _id }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: "orders.treatments",
+          populate: "facilities",
+        });
+
+        return user.orders.id(_id);
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      const order = new Order({ treatments: args.treatments });
+      const line_items = [];
+      const { treatments } = await order.populate("treatments");
+      // check !
+      for (let i = 0; i < treatments.length; i++) {
+        const treatment = await stripe.treatments.create({
+          name: treatments[i].name,
+          description: treatments[i].description,
+          images: [`${url}/images/${treatments[i].image}`],
+        });
+
+        const price = await stripe.prices.create({
+          treatment: treatment.id,
+          unit_amount: treatments[i].price * 100,
+          currency: "GBP",
+        });
+
+        line_items.push({
+          price: price.id,
+          quantity: 1,
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items,
+        mode: "payment",
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`,
+      });
+
+      return { session: session.id };
+    },
+    Mutation: {
+      addUser: async (parent, { name, email, password }) => {
+        const user = await User.create({ name, email, password });
+        const token = signToken(user);
+        return { token, user };
+      },
+      login: async (parent, { email, password }) => {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+          throw new AuthenticationError(
+            "No user found with this email address"
+          );
+        }
+
+        const correctPw = await user.isCorrectPassword(password);
+
+        if (!correctPw) {
+          throw new AuthenticationError("Incorrect credentials");
+        }
+
+        const token = signToken(user);
+
+        return { token, user };
+      },
     },
   },
 };
-
 module.exports = resolvers;
