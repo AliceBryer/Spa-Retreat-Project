@@ -1,8 +1,6 @@
 const db = require("../config/connection");
 const { Facilities, Treatments, User } = require("../models");
 
-const spaData = require("./spa.json");
-
 db.once("open", async () => {
   // Treatment seed data
 

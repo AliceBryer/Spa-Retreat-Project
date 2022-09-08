@@ -1,5 +1,5 @@
 const User = require("./User");
-const Treatments = require("./Treatment");
+const Treatments = require("./Treatments");
 const Facilities = require("./Facilities");
 const Order = require("./Order");
 const Review = require("./review");
