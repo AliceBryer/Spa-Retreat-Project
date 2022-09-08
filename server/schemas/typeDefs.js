@@ -7,31 +7,39 @@ const typeDefs = gql`
     email: String
     orders: [Order]
   }
+
   type Order {
     _id: ID
     purchaseDate: String
-    treatments: [Treatments]
+    treatments: [Treatment]
+    user: String
   }
+
   type Facilities {
     _id: ID
     name: String
     description: String
     pictureURL: String
-    price: Float
   }
-  type Treatments {
+
+  type Treatment {
     _id: ID
     name: String
     description: String
     pictureURL: String
     price: Float
   }
+
   type Auth {
     token: ID!
     user: User
   }
   type Query {
     me: User
+    facilities: [Facilities]
+    treatments: [Treatment]
+    user: User
+    order(_id: ID!): Order
   }
   type Mutation {
     addUser(
@@ -55,12 +63,3 @@ const typeDefs = gql`
   }
 `;
 module.exports = typeDefs;
-
-
-
-
-
-
-
-
-
