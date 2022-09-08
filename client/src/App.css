@@ -95,41 +95,51 @@ a:hover {
 }
 /* end of homepage css */
 
-
 /* treatment-item css */
 .treatment-item-container {
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   margin: 20px;
 }
 
+.treatment-item-container:hover .treatment-description {
+  display: block;
+}
+
 .single-treatment-item {
-  margin:50px;
+  margin: 50px;
   box-shadow: grey 6px 6px;
 }
 
+.treatment-description {
+  display: none;
+}
+
 .treatment-image {
-  height:250px;
+  object-fit: cover;
+}
+
+.treatment-price {
+  font-size: 500;
 }
 
 .heart-icon {
-  margin-left:8px;
+  margin-left: 8px;
 }
 
 .cart-icon {
-  margin-left:8px;
+  margin-left: 8px;
 }
 
 .heart-icon:hover {
-  color:red
+  color: red;
 }
 
 .cart-icon:hover {
-  color: rgb(3, 3, 117)
+  color: rgb(3, 3, 117);
 }
-
 
 /* start of wishlist css */
 .wishlist-card {
