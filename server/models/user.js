@@ -4,23 +4,23 @@ const { Schema } = mongoose;
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
-  Name: {
+  name: {
     type: String,
     required: true,
     trim: true,
   },
-  Email: {
+  email: {
     type: String,
     required: true,
     unique: true,
     match: [/.+@.+\..+/, "Please enter a valid email address."],
   },
-  Password: {
+  password: {
     type: String,
     required: true,
     minlength: 5,
   },
-  ProfilePic: {
+  profilePic: {
     type: String,
     required: false,
   },

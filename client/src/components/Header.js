@@ -18,27 +18,27 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-list">
-              <NavLink to="/Facilities">Facilities</NavLink>
+              <NavLink to="/facilities">Facilities</NavLink>
             </li>
             <li className="nav-list">
-              <NavLink to="/Treatment">Treatment</NavLink>
+              <NavLink to="/treatment">Treatment</NavLink>
             </li>
 
             {/* Wishlist for testing purpose */}
             <li className="nav-list">
-              <NavLink to="/Wishlist">Wishlist</NavLink>
+              <NavLink to="/wishlist">Wishlist</NavLink>
             </li>
             {/* navbar when logged in, show my account and basket, and logout*/}
             {Auth.loggedIn() ? (
               <>
                 <li className="nav-list">
-                  <NavLink to="/MyAccount">My Account</NavLink>
+                  <NavLink to="/myaccount">My Account</NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink to="/Wishlist">Wishlist</NavLink>
+                  <NavLink to="/wishlist">Wishlist</NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink to="/Basket">
+                  <NavLink to="/basket">
                     <FontAwesomeIcon icon={faCartShopping} />
                     &nbsp;
                   </NavLink>
@@ -51,7 +51,7 @@ const Header = () => {
               <>
                 {/* navbar when logged out, show longin and signup */}
                 <li className="nav-list">
-                  <NavLink to="/Login">Login</NavLink>
+                  <NavLink to="/login">Login</NavLink>
                 </li>
               </>
             )}

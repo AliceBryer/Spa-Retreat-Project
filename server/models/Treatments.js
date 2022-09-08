@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-const TreatmentSchema = new Schema({
+const TreatmentsSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -13,7 +13,7 @@ const TreatmentSchema = new Schema({
     required: true,
     min: 0.99,
   },
-  pictureurl: {
+  pictureURL: {
     type: String,
     required: true,
   },
@@ -24,6 +24,6 @@ const TreatmentSchema = new Schema({
   },
 });
 
-const Treatments = mongoose.model("Treatment", TreatmentSchema);
+const Treatments = mongoose.model("Treatments", TreatmentsSchema);
 
 module.exports = Treatments;
