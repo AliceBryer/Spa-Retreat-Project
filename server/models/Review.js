@@ -14,15 +14,15 @@ const reviewSchema = new Schema({
   description: {
     type: String,
   },
-  User: [
+  user: [
     {
-      type: Schema.Types.UserId,
-      ref: "UserId",
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
   ],
   treatments: [
     {
-      type: Schema.Types.TreatmentId,
+      type: Schema.Types.ObjectId,
       ref: "Treatments",
     },
   ],

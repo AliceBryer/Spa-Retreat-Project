@@ -1,28 +1,23 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-const WishlistSchema = new Schema({
-    User: [
-        {
-         type:Schema.Types.UserId,
-         ref: 'UserId'
-        }
-     ],
+const wishlistSchema = new Schema({
+  user: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
 
-     Treatment: [
-        {
-            type: Schema.Types.TreatmentlistId,
-            ref: 'Treatment'
-        }
-      ],
+  treatments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Treatments",
+    },
+  ],
+});
 
-    });
+const Wishlist = mongoose.model("Wishlist", wishlistSchema);
 
-    const Wishlist = mongoose.model('Wishlist',wishlistSchema);
-    
-    module.exports = Wishlist;
-    
-
-   
- 
+module.exports = Wishlist;
