@@ -13,6 +13,7 @@ import Treatment from "./components/treatmentList/treatmentList";
 import Wishlist from "./components/Wishlist";
 import About from "./components/About";
 import AboutUs from "./components/AboutUs";
+import MyAccount from "./components/MyAccount";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/about" element={<About />} />
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </Wrapper>
       <Footer />
