@@ -13,7 +13,7 @@ const TreatmentsSchema = new Schema({
     required: true,
     min: 0.99,
   },
-  pictureurl: {
+  pictureURL: {
     type: String,
     required: true,
   },
