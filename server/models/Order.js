@@ -10,14 +10,14 @@ const orderSchema = new Schema({
 
   treatments: [
     {
-      type: Schema.Types.TreatmentId,
+      type: Schema.Types.ObjectId,
       ref: "Treatments",
     },
   ],
-  User: [
+  user: [
     {
-      type: Schema.Types.UserId,
-      ref: "UserId",
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
   ],
 });
