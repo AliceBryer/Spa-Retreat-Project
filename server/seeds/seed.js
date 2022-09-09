@@ -80,7 +80,7 @@ db.once("open", async () => {
     },
     {
       name: "Balayage",
-      descripton:
+      description:
         "Balayage allows for a sun-kissed, natural looking hair colour, with softer, less noticeable re-growth.",
       price: 84,
       pictureURL:
@@ -171,34 +171,39 @@ db.once("open", async () => {
   await User.deleteMany();
 
   await User.create({
-    name: "Pamela Smith",
+    firstName: "Pamela",
+    lastName: "Smith",
     email: "pamela@testmail.com",
     password: "password12345",
   });
 
   await User.create({
-    name: "Robert Trent",
+    firstName: "Robert",
+    lastName: "Trent",
     email: "robert.trent@testmail.com",
     password: "password12345",
     profilePic:
       "https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000",
   });
   await User.create({
-    name: "Abigail Harvey",
+    firstName: "Abigail",
+    lastName: "Harvey",
     email: "abih_123@testmail.com",
     password: "password12345",
     profilePic:
       "https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000",
   });
   await User.create({
-    name: "Hannah Griffiths",
+    firstName: "Hannah",
+    lastName: "Griffiths",
     email: "hannahg@testmail.com",
     password: "password12345",
     profilePic:
       "https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000",
   });
   await User.create({
-    name: "Gemma Wildman",
+    firstName: "Gemma",
+    lastName: "Wildman",
     email: "wildgem@testmail.com",
     password: "password12345",
     profilePic:
