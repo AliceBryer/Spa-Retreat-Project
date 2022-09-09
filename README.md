@@ -88,7 +88,7 @@ This application is a prototype which was created in two weeks. Our vision for f
 ## Contact Us
 
 - Angela Wong: angelawong3@yahoo.com
-- Mohammed Hassan:
+- Mohammed Hassan: mohamedisaaq0@gmail.com
 - Keyur M:
 - Alice Bryer: alicebryer123@gmail.com
 - Ahmed Shahnawaz:
