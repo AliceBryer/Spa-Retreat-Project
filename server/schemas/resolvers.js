@@ -116,6 +116,8 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
+    // TODO: del user
+
     // TODO: add treatment
 
     // update treatment
