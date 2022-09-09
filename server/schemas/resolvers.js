@@ -25,7 +25,7 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: "Order.reatments",
+          path: "Order.treatments",
           populate: "facilities",
         });
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
