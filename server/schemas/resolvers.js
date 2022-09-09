@@ -122,18 +122,20 @@ const resolvers = {
     },
 
     // TODO: add treatment
+    // no need?
 
-    // update treatment
-    updateTreatment: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-      return await Product.findByIdAndUpdate(
-        _id,
-        { $inc: { quantity: decrement } },
-        { new: true }
-      );
-    },
+    // update treatment: no need?
+    // updateTreatment: async (parent, { _id, quantity }) => {
+    //   const decrement = Math.abs(quantity) * -1;
+    //   return await Product.findByIdAndUpdate(
+    //     _id,
+    //     { $inc: { quantity: decrement } },
+    //     { new: true }
+    //   );
+    // },
 
     // TODO: del treatment
+    // no need?
 
     // add order
     addOrder: async (parent, { treatment }, context) => {
@@ -153,12 +155,24 @@ const resolvers = {
     // TODO: del order
 
     // TODO: add treatment to wishlist
-
+    addTreatmentToWishlist: async (parent, { treatment }, context) => {
+      if (context.user) {
+        console.log(treatment);
+        const wishlistData = await Wishlist.create({
+          treatments: treatment,
+          user: context.user._id,
+        });
+        return wishlistData.populate("treatments");
+      }
+      throw new AuthenticationError("Not logged in");
+    },
     // TODO: update treatment in wishlist
+    // no need
 
-    // TODO: del treatment from wishlist
+    // TODO: remove treatment from wishlist
+    // removeTreatmentFromWishlist
 
-    // TODO: add review
+    // BONUS TODO: add review
   },
 };
 

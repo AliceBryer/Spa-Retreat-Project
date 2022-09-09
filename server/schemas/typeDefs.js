@@ -16,6 +16,12 @@ const typeDefs = gql`
     user: String
   }
 
+  type Wishlist {
+    _id: ID
+    treatments: [Treatment]
+    user: String
+  }
+
   type Facilities {
     _id: ID
     name: String
@@ -65,6 +71,7 @@ const typeDefs = gql`
     addOrder(treatment: [ID]!): Order
     updateOrder(_id: ID!, purchaseDate: String, quantity: Int!): Treatment
     login(email: String!, password: String!): Auth
+    addTreatmentToWishlist(treatment: [ID]!): Wishlist
   }
 `;
 module.exports = typeDefs;
