@@ -1,13 +1,13 @@
 # Spa-Retreat-Project
 
-Our Spa retreat project is based on our make believe spa '404GETAWAY'. A group application designed for University Bootcamp.
+Our Spa retreat project is based on our make believe spa '404GETAWAY'. A MERN stack application. 
 
 ## User Story
 
 - As a user I want to be able to view the facilities at '404GETAWAY.
 - As a user I want to be able to create a secure account.
 - As a user I want to be able to log in to my account, edit my details, and see my wishlist.
-- As a user I want to be able to view and add treatments to my basket, and checkout securely.
+- As a user I want to be able to view and add treatments to my basket.
 - As a user I want to be able to save treatments to view at a later time in my wishlist.
 
 ## Table of Contents
@@ -15,7 +15,7 @@ Our Spa retreat project is based on our make believe spa '404GETAWAY'. A group a
 [User Story](#user-story)  
 [Technologies Used](#technologiesdependencies-used)  
 [Installation](#installation)  
- [Usage](#usage)  
+[Usage](#usage)  
 [Screenshots](#screenshots)  
 [Contributing](#contributing)  
 [Deployed Link](#deployed-link)  
@@ -25,43 +25,41 @@ Our Spa retreat project is based on our make believe spa '404GETAWAY'. A group a
 
 ## Technologies/Dependencies Used
 
-Back end
-
-- HTML, CSS, JS
-- React
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+- JavaScript
+- JWT
 - Apollo
-- Express
 - Mongoose
 - graphql
 - bycrpyt
-- nodemon
-
-Front End
-
+- CSS
 - Material UI
 - Fontawesome
-- Apollo
-- JWT
-- graphql
+
 
 ## Installation
 
 ```
-run `npm install` in your command line to install the dependencies
+git clone git@github.com:AliceBryer/Spa-Retreat-Project.git
+cd Spa-Retreat-Project
+npm install
 
 ```
 
 ## Usage
 
 ```
-In your terminal run the command `npm run start`. Make sure you are in the correct file.
+npm run develop
 ```
 
 ## Screenshots
 
 ## Contributing
 
-If you would like to contribute on this project at all, please contact anyone of us via email or phone. All personal details are in our 'about us' page.
+If you would like to contribute on this project at all, please contact anyone of us via email or phone. All personal details are in our 'contributors' page.
 
 ## Deployed Link
 
@@ -70,10 +68,7 @@ If you would like to contribute on this project at all, please contact anyone of
 ```
 
 ## Licence
-
-```
-
-```
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 ## Future Development
 
