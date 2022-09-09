@@ -1,4 +1,5 @@
 const { gql } = require("apollo-server-express");
+
 const typeDefs = gql`
   type User {
     _id: ID
@@ -34,6 +35,7 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
+
   type Query {
     me: User
     facilities: [Facilities]
@@ -41,6 +43,7 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
   }
+
   type Mutation {
     addUser(
       firstName: String!
@@ -48,12 +51,14 @@ const typeDefs = gql`
       email: String!
       password: String!
     ): Auth
+
     updateUser(
       firstName: String
       lastName: String
       email: String
       password: String
     ): User
+    deleteUser(_id: ID!): User
     addTreatment(_id: ID!, name: String, quantity: Int!): Treatment
     updateTreatment(_id: ID!, name: String, quantity: Int!): Treatment
     deleteTreatment(_id: ID!, name: String, quantity: Int!): Treatment

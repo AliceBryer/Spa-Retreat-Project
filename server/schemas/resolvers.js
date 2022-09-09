@@ -117,6 +117,9 @@ const resolvers = {
     },
 
     // TODO: del user
+    deleteUser: async (parent, { _id }) => {
+      return User.findOneAndDelete({ _id });
+    },
 
     // TODO: add treatment
 
