@@ -8,6 +8,7 @@ const {
 } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
@@ -16,12 +17,18 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+
+    // get all facilities
     facilities: async () => {
       return await Facilities.find();
     },
+
+    // get all treatments
     treatments: async () => {
       return await Treatments.find();
     },
+
+    //  get user
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -33,6 +40,8 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
+
+    // get order
     order: async (parent, { _id }, context) => {
       if (context.user) {
         console.log("HEREE");
@@ -42,6 +51,7 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
+
     // checkout: async (parent, args, context) => {
     //   const url = new URL(context.headers.referer).origin;
     //   const order = new Order({ treatments: args.treatments });
@@ -73,12 +83,9 @@ const resolvers = {
     //   });
     //   return { session: session.id };
   },
+
   Mutation: {
-    addUser: async (parent, { firstName, lastName, email, password }) => {
-      const user = await User.create({ firstName, lastName, email, password });
-      const token = signToken(user);
-      return { token, user };
-    },
+    // login
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
@@ -91,6 +98,39 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
+    // add user
+    addUser: async (parent, { firstName, lastName, email, password }) => {
+      const user = await User.create({ firstName, lastName, email, password });
+      const token = signToken(user);
+      return { token, user };
+    },
+
+    // update user
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, {
+          new: true,
+        });
+      }
+      throw new AuthenticationError("Not logged in");
+    },
+
+    // TODO: add treatment
+
+    // update treatment
+    updateTreatment: async (parent, { _id, quantity }) => {
+      const decrement = Math.abs(quantity) * -1;
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $inc: { quantity: decrement } },
+        { new: true }
+      );
+    },
+
+    // TODO: del treatment
+
+    // add order
     addOrder: async (parent, { treatment }, context) => {
       if (context.user) {
         console.log(treatment);
@@ -102,22 +142,18 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
-    updateUser: async (parent, args, context) => {
-      if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, {
-          new: true,
-        });
-      }
-      throw new AuthenticationError("Not logged in");
-    },
-    updateTreatment: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-      return await Product.findByIdAndUpdate(
-        _id,
-        { $inc: { quantity: decrement } },
-        { new: true }
-      );
-    },
+
+    // TODO: update order
+
+    // TODO: del order
+
+    // TODO: add treatment to wishlist
+
+    // TODO: update treatment in wishlist
+
+    // TODO: del treatment from wishlist
+
+    // TODO: add review
   },
 };
 
