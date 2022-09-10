@@ -71,8 +71,10 @@ const typeDefs = gql`
     deleteTreatment(_id: ID!, name: String, quantity: Int!): Treatment
     addOrder(treatment: [ID]!): Order
     updateOrder(_id: ID!, purchaseDate: String, quantity: Int!): Treatment
+    deleteOrder(_id: ID!): Order
     login(email: String!, password: String!): Auth
     addTreatmentToWishlist(treatment: [ID]!): Wishlist
+    removeTreatmentFromWishlist(treatment: [ID]!): Wishlist
   }
 `;
 module.exports = typeDefs;

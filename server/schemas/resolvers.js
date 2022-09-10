@@ -161,8 +161,24 @@ const resolvers = {
     },
 
     // TODO: update order
+    updateOrder: async (parent, { _id, purchaseDate }, context) => {
+      if (context.user) {
+        return await Order.findByIdAndUpdate(
+          _id,
+          { purchaseDate },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("Not logged in");
+    },
 
     // TODO: del order
+    deleteOrder: async (parent, { _id }, context) => {
+      if (context.user) {
+        return await Order.findByIdAndDelete(_id);
+      }
+      return new AuthenticationError("Not logged in");
+    },
 
     // TODO: add treatment to wishlist
     addTreatmentToWishlist: async (parent, { treatment }, context) => {
@@ -181,17 +197,30 @@ const resolvers = {
     // no need
 
     // TODO: remove treatment from wishlist
-    // removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
-    //   if (context.user) {
-    //     return await Wishlist.findByIdAndUpdate(
-    //       { _id: context.user._id },
-    //       { $pull: { treatments: { _id } } },
-    //       { new: true }
-    //     );
-    //   }
-    // },
+    removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
+      if (context.user) {
+        console.log(treatment);
+        const wishlistData = await Wishlist.findOneAndDelete({
+          treatments: treatment,
+          user: context.user._id,
+        });
+        return wishlistData.populate("treatments");
+      }
+      throw new AuthenticationError("Not logged in");
+    },
 
     // BONUS TODO: add review
+    // addReview: async (parent, { review }, context) => {
+    //   if (context.user) {
+    //     console.log(review);
+    //     const reviewData = await Review.create({
+    //       review: review,
+    //       user: context.user._id,
+    //     });
+    //     return reviewData.populate("review");
+    //   }
+    //   throw new AuthenticationError("Not logged in");
+    // },
   },
 };
 
