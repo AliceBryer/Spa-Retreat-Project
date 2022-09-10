@@ -1,12 +1,24 @@
 import { gql } from "@apollo/client";
 
-export const QUERY_USER = gql`
-  query user($name: String!) {
-    user(name: $name) {
+export const QUERY_ME = gql`
+  query me {
+    me {
       _id
-      name
+      firstName
+      lastName
       email
-      profilePic
+      orders {
+        _id
+        purchaseDate
+        user
+        treatments {
+          _id
+          name
+          description
+          pictureURL
+          price
+        }
+      }
     }
   }
 `;
@@ -16,27 +28,9 @@ export const QUERY_TREATMENTS = gql`
     treatments {
       _id
       name
-      price
-      pictureURL
       description
-    }
-  }
-`;
-
-export const QUERY_SINGLE_TREATMENT = gql`
-  query getSingleTreatment($treatmentId: ID!) {
-    treatment(treatmentId: $treatmentId) {
-      _id
-      name
-      price
       pictureURL
-      description
-      reviews {
-        _id
-        title
-        name
-        description
-      }
+      price
     }
   }
 `;
@@ -46,16 +40,48 @@ export const QUERY_FACILITIES = gql`
     facilities {
       _id
       name
+      description
       pictureURL
     }
   }
 `;
 
-// export const QUERY_ORDERS = gql`
-//   query getOrders {
-//     orders {
-// // to be done
-//       }
-//     }
-//   }
-// `;
+export const QUERY_USER = gql`
+  query getUser {
+    user {
+      _id
+      firstName
+      lastName
+      email
+      orders {
+        _id
+        purchaseDate
+        user
+        treatments {
+          _id
+          name
+          description
+          pictureURL
+          price
+        }
+      }
+    }
+  }
+`;
+
+export const QUERY_ORDER = gql`
+  query getOrder($id: ID!) {
+    order(_id: $id) {
+      _id
+      purchaseDate
+      treatments {
+        _id
+        name
+        description
+        pictureURL
+        price
+      }
+      user
+    }
+  }
+`;

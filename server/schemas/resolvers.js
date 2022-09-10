@@ -52,6 +52,16 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
+    // get wishlist
+    wishlist: async (parent, { _id }, context) => {
+      if (context.user) {
+        const wishlistData = await Wishlist.findById(_id);
+        console.log(wishlistData);
+        return wishlistData;
+      }
+      throw new AuthenticationError("Not logged in");
+    },
+
     // checkout: async (parent, args, context) => {
     //   const url = new URL(context.headers.referer).origin;
     //   const order = new Order({ treatments: args.treatments });
