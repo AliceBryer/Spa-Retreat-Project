@@ -66,13 +66,10 @@ const typeDefs = gql`
       password: String
     ): User
     deleteUser(_id: ID!): User
-    addTreatment(_id: ID!, name: String, quantity: Int!): Treatment
-    updateTreatment(_id: ID!, name: String, quantity: Int!): Treatment
-    deleteTreatment(_id: ID!, name: String, quantity: Int!): Treatment
-    addOrder(treatment: [ID]!): Order
-    updateOrder(_id: ID!, purchaseDate: String, quantity: Int!): Treatment
-    deleteOrder(_id: ID!): Order
     login(email: String!, password: String!): Auth
+    addOrder(treatment: [ID]!): Order
+    updateOrder(_id: ID!, purchaseDate: String): Treatment
+    deleteOrder(_id: ID!): Order
     addTreatmentToWishlist(treatment: [ID]!): Wishlist
     removeTreatmentFromWishlist(treatment: [ID]!): Wishlist
   }
