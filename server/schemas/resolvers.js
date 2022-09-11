@@ -200,14 +200,14 @@ const resolvers = {
     // },
 
     // remove treatment from wishlist
-    // TODO: can remove one treatment from wishlist by treatment id
     removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
       if (context.user) {
         console.log(treatment);
-        const wishlistData = await Wishlist.findOneAndRemove(
-          { $pull: { treatments: treatment } },
-          { user: context.user._id }
-        );
+        const wishlistData = await Wishlist.findOneAndDelete({
+          treatments: treatment,
+          user: context.user._id,
+          new: true,
+        });
         return wishlistData.populate("treatments");
       }
       throw new AuthenticationError("Not logged in");
