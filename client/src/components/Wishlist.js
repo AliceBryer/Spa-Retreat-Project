@@ -5,36 +5,37 @@ import { removeTreatmentId, saveTreatmentIds } from "../utils/localStorage";
 
 import { useQuery, useMutation } from "@apollo/client";
 // name of the functions to be edited after getting the code from backend team
-import { GET_USER } from "../utils/queries";
+import { QUERY_WISHLIST } from "../utils/queries";
 import { DEL_WISHLIST } from "../utils/mutations";
 
 const Wishlist = () => {
-  //   const { loading, data } = useQuery(GET_USER);
-  //   const [removeTreatment] = useMutation(DEL_WISHLIST);
+  // const { loading, data } = useQuery(QUERY_WISHLIST);
+  // const [removeTreatmentFromWishlist] = useMutation(DEL_WISHLIST);
 
-  //   const userData = data?.user || {};
+  // const wishlistData = data?.wishlist || {};
 
-  //   const handleDeleteTreatment = async (treatmentId) => {
-  //     const token = Auth.loggedIn() ? Auth.getToken() : null;
+  // const handleDeleteTreatment = async (_id) => {
+  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-  //     if (!token) {
-  //       return false;
-  //     }
-  //     try {
-  //       await removeTreatment({
-  //         variables: { treatmentId },
-  //       });
-  //       removeTreatmentId(treatmentId);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-
-  //   // if data isn't here yet
-  //   if (loading) {
-  //     return <h2>LOADING...</h2>;
+  //   if (!token) {
+  //     return false;
   //   }
+  //   try {
+  //     await removeTreatmentFromWishlist({
+  //       variables: { _id },
+  //     });
+  //     removeTreatmentId(_id);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
+  // // if data isn't here yet
+  // if (loading) {
+  //   return <h2>LOADING...</h2>;
+  // }
+
+  // test w/ dummy data
   const dummyData = [
     {
       name: "Deep tissue full body",
@@ -70,43 +71,34 @@ const Wishlist = () => {
     alert("You clicked add cart!");
   }
 
-  // hard-coded for testing
   return (
     <>
       <div>
         <h2 className="title">WISHLIST</h2>
-        {/* sub-title for wishlist, indicate how many items */}
-        {/* <h5>
-          {userData.savedTreatments.length
-            ? `Viewing ${userData.savedTreatments.length} saved ${
-                userData.savedTreatments.length === 1 ? "treatment" : "treatments"
-              }:`
-            : "You have no saved treatments!"}
-        </h5> */}
       </div>
       <div className="wishlist-container">
-        {/* {userData.savedTreatments.map((treatment) => { */}
-        {dummyData.map((treatment) => {
+        {/* {wishlistData.wishlist.map((treatments) => { */}
+        {dummyData.map((treatments) => {
           return (
             <div
-              // key={treatment.treatmentId}
+              // key={treatments._id}
               class="wishlist-card"
             >
               <img
                 class="treatment-img"
-                src={treatment.pictureURL}
+                src={treatments.pictureURL}
                 // check with the treatment model
-                alt={`photo for ${treatment.name}`}
+                alt={`${treatments.name}`}
               />
               <h5 class="treatment-name">
                 {/* check with the treatment model */}
-                {treatment.name}
+                {treatments.name}
               </h5>
               <div className="btn-container">
                 <button
                   className="btn btn-del"
                   onClick={delButton}
-                  // onClick={() => handleDeleteTreatment(treatment.treatmentId)}
+                  // onClick={() => handleDeleteTreatment(treatments._id)}
                 >
                   Remove
                 </button>
