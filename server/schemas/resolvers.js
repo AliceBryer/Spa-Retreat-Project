@@ -13,7 +13,8 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate(Wishlist);
+        return User.findOne({ _id: context.user._id });
+        // .populate(Wishlist);
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -126,26 +127,19 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
-    // TODO: del user
+    // delete user
     deleteUser: async (parent, { _id }) => {
       return User.findOneAndDelete({ _id });
     },
 
-    // TODO: add treatment
-    // no need?
-
-    // update treatment: no need?
-    // updateTreatment: async (parent, { _id, quantity }) => {
-    //   const decrement = Math.abs(quantity) * -1;
-    //   return await Product.findByIdAndUpdate(
-    //     _id,
-    //     { $inc: { quantity: decrement } },
-    //     { new: true }
-    //   );
-    // },
-
-    // TODO: del treatment
-    // no need?
+    // no need for now:
+    // add treatment
+    // update treatment
+    // del treatment
+    // for typeDefs (if useful):
+    // addTreatment(_id: ID!, name: String, quantity: Int!): Treatment
+    // updateTreatment(_id: ID!, name: String, quantity: Int!): Treatment
+    // deleteTreatment(_id: ID!, name: String, quantity: Int!): Treatment
 
     // add order
     addOrder: async (parent, { treatment }, context) => {
@@ -160,7 +154,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
-    // TODO: update order
+    // update order
     updateOrder: async (parent, { _id, purchaseDate }, context) => {
       if (context.user) {
         return await Order.findByIdAndUpdate(
@@ -172,7 +166,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
-    // TODO: del order
+    // del order
     deleteOrder: async (parent, { _id }, context) => {
       if (context.user) {
         return await Order.findByIdAndDelete(_id);
@@ -180,7 +174,7 @@ const resolvers = {
       return new AuthenticationError("Not logged in");
     },
 
-    // TODO: add treatment to wishlist
+    // add treatment to wishlist
     addTreatmentToWishlist: async (parent, { treatment }, context) => {
       if (context.user) {
         console.log(treatment);
@@ -193,23 +187,34 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
-    // TODO: update treatment in wishlist
-    // no need
+    // remove treatment from wishlist old version
+    // removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
+    //   if (context.user) {
+    //     console.log(treatment);
+    //     const wishlistData = await Wishlist.findOneAndDelete({
+    //       treatments: treatment,
+    //       user: context.user._id,
+    //     });
+    //     return wishlistData.populate("treatments");
+    //   }
+    //   throw new AuthenticationError("Not logged in");
+    // },
 
-    // TODO: remove treatment from wishlist
+    // remove treatment from wishlist
     removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
       if (context.user) {
         console.log(treatment);
         const wishlistData = await Wishlist.findOneAndDelete({
           treatments: treatment,
           user: context.user._id,
+          new: true,
         });
         return wishlistData.populate("treatments");
       }
       throw new AuthenticationError("Not logged in");
     },
 
-    // BONUS TODO: add review
+    // BONUS: add review
     // addReview: async (parent, { review }, context) => {
     //   if (context.user) {
     //     console.log(review);
