@@ -54,11 +54,11 @@ const resolvers = {
     },
 
     // get wishlist
-    wishlist: async (parent, { _id }, context) => {
+    wishlist: async (parent, args, context) => {
       if (context.user) {
-        const wishlistData = await Wishlist.findById(_id);
+        const wishlistData = await Wishlist.findOne({ user: context.user._id });
         console.log(wishlistData);
-        return wishlistData;
+        return wishlistData.populate("treatments");
       }
       throw new AuthenticationError("Not logged in");
     },
@@ -176,13 +176,30 @@ const resolvers = {
 
     // add treatment to wishlist
     addTreatmentToWishlist: async (parent, { treatment }, context) => {
+      let i;
       if (context.user) {
-        console.log(treatment);
-        const wishlistData = await Wishlist.create({
-          treatments: treatment,
-          user: context.user._id,
-        });
-        return wishlistData.populate("treatments");
+        const userWishlist = await Wishlist.findOneAndUpdate(
+          { user: context.user._id },
+          {
+            $push: {
+              treatments: treatment,
+            },
+          },
+          {
+            new: true,
+          }
+        );
+
+        if (!userWishlist) {
+          const newWishlist = await Wishlist.create({
+            treatments: treatment,
+            user: context.user._id,
+          });
+
+          return newWishlist.populate("treatments");
+        }
+
+        return userWishlist.populate("treatments");
       }
       throw new AuthenticationError("Not logged in");
     },
