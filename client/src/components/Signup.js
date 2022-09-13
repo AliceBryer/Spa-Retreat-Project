@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -11,16 +11,45 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
+
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const [userFormData, setUserFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+
+  const [addUser, { error }] = useMutation(ADD_USER);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+
+    const data = event.currentTarget;
+
+    try {
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
+
+      Auth.login(data.addUser.token);
+    } catch (err) {
+      console.error(err);
+    }
+
+    setUserFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
     });
+
+    console.log(data);
   };
 
   return (
@@ -50,13 +79,19 @@ export default function SignUp() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-name"
                   name="firstName"
                   required
                   fullWidth
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  value={userFormData.firstName}
+                  onChange={(event) =>
+                    setUserFormData({
+                      ...userFormData,
+                      firstName: event.target.value,
+                    })
+                  }
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -66,7 +101,14 @@ export default function SignUp() {
                   id="lastName"
                   label="Last Name"
                   name="lastName"
-                  autoComplete="family-name"
+                  autoComplete="lname"
+                  value={userFormData.lastName}
+                  onChange={(event) =>
+                    setUserFormData({
+                      ...userFormData,
+                      lastName: event.target.value,
+                    })
+                  }
                 />
               </Grid>
               <Grid item xs={12}>
@@ -77,6 +119,13 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  value={userFormData.email}
+                  onChange={(event) =>
+                    setUserFormData({
+                      ...userFormData,
+                      email: event.target.value,
+                    })
+                  }
                 />
               </Grid>
               <Grid item xs={12}>
@@ -87,7 +136,14 @@ export default function SignUp() {
                   label="Password"
                   type="password"
                   id="password"
-                  autoComplete="new-password"
+                  autoComplete="current-password"
+                  value={userFormData.password}
+                  onChange={(event) =>
+                    setUserFormData({
+                      ...userFormData,
+                      password: event.target.value,
+                    })
+                  }
                 />
               </Grid>
             </Grid>

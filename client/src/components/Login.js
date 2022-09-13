@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -11,18 +11,47 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
+
 const theme = createTheme();
 
 export default function Login() {
-  const handleSubmit = (event) => {
+  const [userFormData, setUserFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [login] = useMutation(LOGIN_USER);
+
+  const handleSubmit = async (event) => {
+    // const data = new setUserFormData(event.currentTarget);;
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    event.stopPropagation();
+
+    console.log(userFormData);
+
+    try {
+      const { data } = await login({
+        variables: {
+          email: userFormData.email,
+          password: userFormData.password,
+        },
+      });
+
+      console.log(data);
+
+      Auth.login(data.login.token);
+    } catch (err) {
+      console.error(err);
+    }
+
+    setUserFormData({
+      email: "",
+      password: "",
     });
   };
-
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -58,6 +87,13 @@ export default function Login() {
                   name="email"
                   autoComplete="email"
                   autoFocus
+                  value={userFormData.email}
+                  onChange={(event) => {
+                    setUserFormData({
+                      ...userFormData,
+                      email: event.target.value,
+                    });
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -70,6 +106,13 @@ export default function Login() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  value={userFormData.password}
+                  onChange={(event) => {
+                    setUserFormData({
+                      ...userFormData,
+                      password: event.target.value,
+                    });
+                  }}
                 />
               </Grid>
             </Grid>
