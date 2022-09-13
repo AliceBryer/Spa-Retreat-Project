@@ -38,8 +38,9 @@ export default function UserCard(props) {
 
   return (
     <Card variant="outlined" className={classes.container}>
+      <h1 id="myaccountitle">My Account:</h1>
       <Grid container spacing={2}>
-        <Grid item xs={4} id="profilepic">
+        <Grid item xs={4} id="myaccountprofilepic">
           <CardMedia align="left">
             <Avatar
               alt="Remy Sharp"
@@ -49,38 +50,41 @@ export default function UserCard(props) {
           </CardMedia>
         </Grid>
 
-        <Grid item xs={8} id>
-          <CardContent align="left">
+        <Grid item xs={8}>
+          <CardContent align="left" id="myaccountdetails">
             <Typography
+              id="myaccountdetailstext"
               className={classes.text}
               color="textSecondary"
               variant="h6"
-              align="center"
+              align="left"
             >
               {"First Name: Mohamed "}
             </Typography>
             <Typography
+              id="myaccountdetailstext"
               className={classes.text}
               color="textSecondary"
               variant="h6"
-              align="center"
+              align="left"
             >
               {"First Name: Mohamed "}
             </Typography>
             <Typography
+              id="myaccountdetailstext"
               className={classes.text}
               color="textSecondary"
               variant="h6"
-              align="center"
+              align="left"
             >
               {"Email: Mohamed@test.com "}
             </Typography>
             <Button
-              fullWidth
               variant="contained"
               sx={{ mt: 2, mb: 2 }}
               color="error"
               onClick={handleButtonClick}
+              size="large"
             >
               Delete Account
             </Button>

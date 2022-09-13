@@ -230,7 +230,24 @@ a:hover {
 }
 
 /* My account css styling */
-#profilepic {
-  padding-top: 300px;
-  padding-left: 150px;
+
+#myaccountitle {
+  text-align: center;
+  padding-top: 75px;
+  text-decoration: underline;
+  font-size: 35px;
+}
+
+#myaccountprofilepic {
+  padding-top: 100px;
+  padding-left: 250px;
+}
+
+#myaccountdetails {
+  padding-top: 150px;
+  padding-left: 50px;
+}
+
+#myaccountdetailstext {
+  font-size: 26px;
 }
