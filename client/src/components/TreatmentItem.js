@@ -12,9 +12,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
 
 const TreatmentItem = () => {
   const { loading, data } = useQuery(QUERY_TREATMENTS);
+  const dispatch = useDispatch();
 
   if (loading) {
     return <div>Loading...</div>;
@@ -63,7 +65,10 @@ const TreatmentItem = () => {
               Add to wishlist{" "}
               <FontAwesomeIcon className="heart-icon" icon={faHeart} />{" "}
             </Button>
-            <Button size="small">
+            <Button
+              size="small"
+              onClick={() => dispatch({ type: "ADD", payload: treatment })}
+            >
               Add to Basket{" "}
               <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />{" "}
             </Button>
