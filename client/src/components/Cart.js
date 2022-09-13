@@ -14,7 +14,25 @@ const Cart = () => {
   return (
     <div className="">
       <Link to=""></Link>
-      <div>{cart.map((item) => {})}</div>
+      <div>
+        {cart.map((item) => {
+          return (
+            <div className="" key={item.id}>
+              <div>
+                <img src="" alt="" />
+                <h4>{item.name}</h4>
+                <p>Price : GBP{item.price}</p>
+                <p>Total : GBP{item.price * item.quantity}</p>
+                <button
+                  onClick={() => dispatch({ type: "REMOVE", payload: item })}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
