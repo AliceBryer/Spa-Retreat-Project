@@ -176,7 +176,6 @@ const resolvers = {
 
     // add treatment to wishlist
     addTreatmentToWishlist: async (parent, { treatment }, context) => {
-      let i;
       if (context.user) {
         const userWishlist = await Wishlist.findOneAndUpdate(
           { user: context.user._id },
@@ -204,29 +203,23 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
 
-    // remove treatment from wishlist old version
-    // removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
-    //   if (context.user) {
-    //     console.log(treatment);
-    //     const wishlistData = await Wishlist.findOneAndDelete({
-    //       treatments: treatment,
-    //       user: context.user._id,
-    //     });
-    //     return wishlistData.populate("treatments");
-    //   }
-    //   throw new AuthenticationError("Not logged in");
-    // },
-
     // remove treatment from wishlist
     removeTreatmentFromWishlist: async (parent, { treatment }, context) => {
       if (context.user) {
         console.log(treatment);
-        const wishlistData = await Wishlist.findOneAndDelete({
-          treatments: treatment,
-          user: context.user._id,
-          new: true,
-        });
-        return wishlistData.populate("treatments");
+        const updatedWishlistData = await Wishlist.findOneAndUpdate(
+          { user: context.user._id },
+          {
+            $pullAll: {
+              treatments: treatment,
+            },
+          },
+          {
+            new: true,
+          }
+        );
+        console.log(updatedWishlistData);
+        return updatedWishlistData.populate("treatments");
       }
       throw new AuthenticationError("Not logged in");
     },
