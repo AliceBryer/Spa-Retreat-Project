@@ -228,3 +228,9 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* My account css styling */
+#profilepic {
+  padding-top: 300px;
+  padding-left: 150px;
+}
