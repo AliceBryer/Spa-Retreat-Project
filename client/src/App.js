@@ -17,7 +17,7 @@ import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import Facilities from "./components/FacilitiesPage";
 import Footer from "./components/Footer";
-import TreatmentList from "./components/treatmentList/treatmentList";
+import TreatmentList from "./components/TreatmentList";
 import Wishlist from "./components/Wishlist";
 import About from "./components/About";
 import AboutUs from "./components/AboutUs";
