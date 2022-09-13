@@ -51,31 +51,6 @@ a:hover {
 }
 /* end of header css */
 
-/* start of footer css */
-.footer {
-  display: flex;
-  bottom: 0px;
-  padding-left: 10px;
-  width: 100%;
-  height: 7%;
-  margin: auto;
-  align-items: center;
-  background-color: #fff;
-  font-size: 20px;
-  position: fixed;
-}
-
-.footer-wrap {
-  display: inline-block;
-  margin-left: auto;
-}
-
-.footer-list {
-  list-style: none;
-  margin-right: 100px;
-}
-/* end of footer css */
-
 /* start of homepage css */
 .homepage-pic-container {
   display: flex;
@@ -95,7 +70,6 @@ a:hover {
   font-size: 100px;
 }
 /* end of homepage css */
-
 
 /* start of treatment-item css */
 .treatment-item-container {
