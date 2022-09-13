@@ -14,10 +14,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import { validateEmail } from "../utils/validation";
 
 const theme = createTheme();
 
 export default function SignUp() {
+  const [isEmailValid, setIsEmailValid] = useState(true);
   const [userFormData, setUserFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,8 +31,13 @@ export default function SignUp() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    const isEmailValid = validateEmail(userFormData.email);
     const data = event.currentTarget;
+
+    if (!isEmailValid) {
+      setIsEmailValid(isEmailValid);
+      return;
+    }
 
     try {
       const { data } = await addUser({
@@ -86,12 +93,12 @@ export default function SignUp() {
                   label="First Name"
                   autoFocus
                   value={userFormData.firstName}
-                  onChange={(event) =>
+                  onChange={(event) => {
                     setUserFormData({
                       ...userFormData,
                       firstName: event.target.value,
-                    })
-                  }
+                    });
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -113,6 +120,12 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                  error={!isEmailValid}
+                  helperText={
+                    !isEmailValid
+                      ? "Please enter a valid email address"
+                      : undefined
+                  }
                   required
                   fullWidth
                   id="email"
