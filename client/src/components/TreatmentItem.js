@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_TREATMENTS } from "../utils/queries";
-import { ADD_ORDER } from "../utils/mutations";
+import { ADD_ORDER, ADD_WISHLIST } from "../utils/mutations";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -16,12 +16,11 @@ import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 
 const TreatmentItem = () => {
-  // add specific order to cart function
   const [addOrder] = useMutation(ADD_ORDER);
+  const [addWishlist] = useMutation(ADD_WISHLIST);
   const { loading, data } = useQuery(QUERY_TREATMENTS);
   const dispatch = useDispatch();
 
-  // adding specific order to cart
   const addToCart = (treatment) => {
     addOrder({
       variables: {
@@ -33,6 +32,19 @@ const TreatmentItem = () => {
       payload: treatment,
     });
     console.log("added to cart");
+  };
+
+  const addToWishlist = (treatment) => {
+    addWishlist({
+      variables: {
+        treatment: treatment._id,
+      },
+    });
+    dispatch({
+      type: "ADD_TO_WISHLIST",
+      payload: treatment,
+    });
+    console.log("added to wishlist");
   };
 
   if (loading) {
@@ -77,7 +89,7 @@ const TreatmentItem = () => {
             </Typography>
           </CardContent>
           <CardActions className="icon-buttons">
-            <Button size="small">
+            <Button size="small" onClick={() => addToWishlist(treatment)}>
               {" "}
               Add to wishlist{" "}
               <FontAwesomeIcon className="heart-icon" icon={faHeart} />{" "}
