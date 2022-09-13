@@ -1,9 +1,7 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-
-// import Auth from "../utils/auth";
-// import { useMutation } from "@apollo/client";
 
 const AboutUs = () => {
   return (
