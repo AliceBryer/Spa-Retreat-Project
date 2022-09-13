@@ -84,9 +84,9 @@ This application is a prototype which was created in two weeks. Our vision for f
 
 - Angela Wong: angelawong3@yahoo.com
 - Mohammed Hassan: mohamedisaaq0@gmail.com
-- Keyur M:
+- Keyur M: keyurmist@gmail.com
 - Alice Bryer: alicebryer123@gmail.com
-- Ahmed Shahnawaz:
-- Aisha Abdirahman
-- Anfal Ali:
-- Idil Osman:
+- Ahmed Shahnawaz: iahmed.s1@icloud.com
+- Aisha Abdi: aishahajisirad@gmail.com
+- Anfal Ali: Anfal.ali_@hotmail.co.uk
+- Idil Osman: Idil_abukar@live.se
