@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-
-import Auth from "../utils/auth";
-import { useMutation } from "@apollo/client";
+import React from "react";
 
 const AboutUs = () => {
   return <></>;
