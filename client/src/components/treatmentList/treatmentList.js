@@ -1,7 +1,7 @@
 import React from "react";
-import TreatmentItem from "../treatmentItem/treatmentItem";
+import TreatmentItem from "../TreatmentItem/treatmentItem";
 
-function treatmentList() {
+function TreatmentList() {
   return (
     <>
       <div>
@@ -14,4 +14,4 @@ function treatmentList() {
   );
 }
 
-export default treatmentList;
+export default TreatmentList;
