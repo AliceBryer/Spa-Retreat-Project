@@ -53,6 +53,7 @@ const Cart = () => {
           );
         })}
       </div>
+      {total > 0 && <h2>Total : {total}</h2>}
     </div>
   );
 };
