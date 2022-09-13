@@ -44,7 +44,7 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-const store = createStore(Redcuer);
+const store = createStore(Reducer);
 
 function App() {
   useEffect(() => {
