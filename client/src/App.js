@@ -25,6 +25,7 @@ import Wishlist from "./components/Wishlist";
 import About from "./components/About";
 import AboutUs from "./components/AboutUs";
 import MyAccount from "./components/MyAccount";
+import Cart from "./components/Cart";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:3001/graphql",

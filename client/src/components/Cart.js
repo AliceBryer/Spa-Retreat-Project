@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
-  const cart = useSelector((state) => state);
+  const cart = useSelector((state) => state?.cart);
   console.log(cart);
+  const [total, setTotal] = useState(null);
+
   const dispatch = useDispatch();
   const addition = (acc, currentValue) => {
     return acc + currentValue.price * currentValue.quantity;
   };
 
-  const total = cart.reduce(addition, 0);
+  useEffect(() => {
+    if (!cart?.length) return false;
+    setTotal(cart.reduce(addition, 0));
+  }, [cart]);
+
+  if (!cart?.length) return null;
   return (
     <div className="">
       <Link to=""></Link>
       <div>
-        {cart.map((item) => {
+        {cart.map((item, index) => {
           return (
-            <div className="" key={item.id}>
+            <div className="" key={index}>
               <div>
                 <img src="" alt="" />
                 <h4>{item.name}</h4>
