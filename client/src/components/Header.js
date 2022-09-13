@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@mui/material";
 
 import Auth from "../utils/auth";
 
@@ -48,7 +49,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink onClick={Auth.logout}>Logout</NavLink>
+                  <Button onClick={Auth.logout}>Logout</Button>
                 </li>
               </>
             ) : (
