@@ -22,12 +22,20 @@ const Cart = () => {
                 <img src="" alt="" />
                 <h4>{item.name}</h4>
                 <p>Price : GBP{item.price}</p>
-                <p>Total : GBP{item.price * item.quantity}</p>
+                <p>Amount : GBP{item.price * item.quantity}</p>
                 <button
                   onClick={() => dispatch({ type: "REMOVE", payload: item })}
                 >
                   Remove
                 </button>
+              </div>
+              <div>
+                <button
+                  onClick={() => dispatch({ type: "INCREASE", payload: item })}
+                >
+                  +
+                </button>
+                <p></p>
               </div>
             </div>
           );
