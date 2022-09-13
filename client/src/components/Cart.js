@@ -31,7 +31,9 @@ const Cart = () => {
                 <p>Price : GBP{item.price}</p>
                 <p>Amount : GBP{item.price * item.quantity}</p>
                 <button
-                  onClick={() => dispatch({ type: "REMOVE", payload: item })}
+                  onClick={() =>
+                    dispatch({ type: "REMOVE", payload: item._id })
+                  }
                 >
                   Remove
                 </button>
@@ -48,7 +50,7 @@ const Cart = () => {
                     if (item.quantity > 1) {
                       dispatch({ type: "DECREASE", payload: item });
                     } else {
-                      dispatch({ type: "REMOVE", payload: item });
+                      dispatch({ type: "REMOVE", payload: item._id });
                     }
                   }}
                 >

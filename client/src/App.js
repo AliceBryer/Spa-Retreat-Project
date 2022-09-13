@@ -45,7 +45,10 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-const store = createStore(Reducer);
+const store = createStore(
+  Reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
   useEffect(() => {
@@ -68,6 +71,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/aboutUs" element={<AboutUs />} />
               <Route path="/myaccount" element={<MyAccount />} />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </Wrapper>
           <Footer />
