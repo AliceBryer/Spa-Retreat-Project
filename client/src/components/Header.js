@@ -37,7 +37,7 @@ const Header = () => {
                   <NavLink to="/wishlist">Wishlist</NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink to="/basket">
+                  <NavLink to="/cart">
                     <FontAwesomeIcon icon={faCartShopping} />
                     &nbsp;
                   </NavLink>
