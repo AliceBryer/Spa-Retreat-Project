@@ -24,12 +24,6 @@ const Header = () => {
             <li className="nav-list">
               <NavLink to="/treatment">Treatment</NavLink>
             </li>
-
-            {/* Wishlist for testing purpose */}
-            <li className="nav-list">
-              <NavLink to="/wishlist">Wishlist</NavLink>
-            </li>
-
             <li className="nav-list">
               <NavLink to="/aboutus">Contributors</NavLink>
             </li>

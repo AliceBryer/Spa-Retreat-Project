@@ -25,6 +25,7 @@
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 8px;
   padding-left: 20px;
+  font-size: 25px;
 }
 
 .nav-bar {
@@ -212,10 +213,23 @@ a:hover {
 }
 
 /* resposive */
-@media (max-width: 800px) {
-  .nav-list {
-    display: block;
+@media (max-width: 940px) {
+  .header {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
+  .company-name {
+    border-bottom: #000 3px solid;
+    font-size: 30px;
+  }
+  .nav-bar {
+    margin: auto;
+  }
+
   .homepage-pic-container {
     align-items: center;
     justify-content: center;

@@ -1,8 +1,9 @@
 // map through the treatment items to produce this component
 
 import * as React from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_TREATMENTS } from "../utils/queries";
+import { ADD_ORDER } from "../utils/mutations";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -15,8 +16,24 @@ import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 
 const TreatmentItem = () => {
+  // add specific order to cart function
+  const [addOrder] = useMutation(ADD_ORDER);
   const { loading, data } = useQuery(QUERY_TREATMENTS);
   const dispatch = useDispatch();
+
+  // adding specific order to cart
+  const addToCart = (treatment) => {
+    addOrder({
+      variables: {
+        treatment: treatment._id,
+      },
+    });
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: treatment,
+    });
+    console.log("added to cart");
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -67,7 +84,9 @@ const TreatmentItem = () => {
             </Button>
             <Button
               size="small"
-              onClick={() => dispatch({ type: "ADD", payload: treatment })}
+              onClick={() => {
+                addToCart(treatment);
+              }}
             >
               Add to Basket{" "}
               <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />{" "}
