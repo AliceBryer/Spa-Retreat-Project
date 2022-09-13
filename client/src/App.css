@@ -96,7 +96,6 @@ a:hover {
 }
 /* end of homepage css */
 
-
 /* start of treatment-item css */
 .treatment-item-container {
   display: flex;
@@ -202,6 +201,39 @@ a:hover {
 
 .facilities-card-content {
   height: 100px;
+}
+
+/* contributors css */
+
+.card-containers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about-person-card {
+  width: 320px;
+  height: 500px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.2);
+}
+
+.person-image {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+}
+
+.line-break {
+  box-shadow: 0px 3px 5px 1px rgb(0, 0, 0, 0.3);
+}
+
+.about-link {
+  cursor: pointer;
+  margin-top: 35px;
 }
 
 /* resposive */
