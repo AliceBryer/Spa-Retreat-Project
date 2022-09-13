@@ -14,10 +14,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import { validateEmail } from "../utils/validation";
 
 const theme = createTheme();
 
 export default function Login() {
+  const [isEmailValid, setIsEmailValid] = useState(true);
   const [userFormData, setUserFormData] = useState({
     email: "",
     password: "",
@@ -26,11 +28,17 @@ export default function Login() {
   const [login] = useMutation(LOGIN_USER);
 
   const handleSubmit = async (event) => {
-    // const data = new setUserFormData(event.currentTarget);;
     event.preventDefault();
     event.stopPropagation();
 
-    console.log(userFormData);
+    const isEmailValid = validateEmail(userFormData.email);
+
+    console.log(isEmailValid);
+
+    if (!isEmailValid) {
+      setIsEmailValid(isEmailValid);
+      return;
+    }
 
     try {
       const { data } = await login({
@@ -39,8 +47,6 @@ export default function Login() {
           password: userFormData.password,
         },
       });
-
-      console.log(data);
 
       Auth.login(data.login.token);
     } catch (err) {
@@ -52,6 +58,7 @@ export default function Login() {
       password: "",
     });
   };
+
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -79,6 +86,12 @@ export default function Login() {
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
+                  error={!isEmailValid}
+                  helperText={
+                    !isEmailValid
+                      ? "Please enter a valid email address"
+                      : undefined
+                  }
                   margin="normal"
                   required
                   fullWidth
