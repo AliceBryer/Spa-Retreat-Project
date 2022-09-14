@@ -32,7 +32,7 @@ const Wishlist = () => {
       },
     });
     dispatch({
-      type: "ADD_TO_CART",
+      type: "ADD",
       payload: treatment,
     });
     console.log("added to cart");

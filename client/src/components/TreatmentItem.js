@@ -28,7 +28,7 @@ const TreatmentItem = () => {
       },
     });
     dispatch({
-      type: "ADD_TO_CART",
+      type: "ADD",
       payload: treatment,
     });
     console.log("added to cart");
@@ -41,7 +41,7 @@ const TreatmentItem = () => {
       },
     });
     dispatch({
-      type: "ADD_TO_WISHLIST",
+      type: "ADD",
       payload: treatment,
     });
     console.log("added to wishlist");
