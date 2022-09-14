@@ -242,3 +242,26 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* My account css styling */
+
+#myaccountitle {
+  text-align: center;
+  padding-top: 75px;
+  text-decoration: underline;
+  font-size: 35px;
+}
+
+#myaccountprofilepic {
+  padding-top: 100px;
+  padding-left: 250px;
+}
+
+#myaccountdetails {
+  padding-top: 150px;
+  padding-left: 50px;
+}
+
+#myaccountdetailstext {
+  font-size: 26px;
+}
