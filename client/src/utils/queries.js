@@ -87,7 +87,7 @@ export const QUERY_ORDER = gql`
 `;
 
 export const QUERY_WISHLIST = gql`
-  query getWishlist($id: ID!) {
+  query getWishlist {
     wishlist {
       _id
       treatments {
