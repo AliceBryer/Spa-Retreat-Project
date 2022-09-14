@@ -78,41 +78,28 @@ a:hover {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 20px;
+  margin-bottom: 60px;
 }
 
-.single-treatment-item {
-  margin: 50px;
-  box-shadow: grey 6px 6px;
+.icon-buttons {
+  display: flex;
+  justify-content: center;
 }
 
-.treatment-card-content {
-  max-height: 700px;
-}
-
-.treatment-image {
-  object-fit: cover;
-}
-
-.treatment-price {
-  font-size: 500;
-  height: 250px;
-}
-
-.heart-icon {
-  margin-left: 8px;
-}
-
+Button,
+.heart-icon,
 .cart-icon {
   margin-left: 8px;
 }
 
 .heart-icon:hover {
   color: red;
+  transform: scale(1.5);
 }
 
 .cart-icon:hover {
-  color: rgb(3, 3, 117);
+  color: darkblue;
+  transform: scale(1.5);
 }
 /* end of treatment-item css */
 
