@@ -41,13 +41,13 @@ const Wishlist = () => {
   // render wishlist items
   const wishlistCard = wishlistData.map((treatment) => {
     return (
-      <div key={treatment._id} class="wishlist-card">
+      <div key={treatment._id} className="wishlist-card">
         <img
-          class="treatment-img"
+          className="treatment-img"
           src={treatment.pictureURL}
           alt={`${treatment.name}`}
         />
-        <h5 class="treatment-name">{treatment.name}</h5>
+        <h5 className="treatment-name">{treatment.name}</h5>
         <div className="btn-container">
           <button
             className="btn btn-del"
