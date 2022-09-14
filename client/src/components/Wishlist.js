@@ -57,7 +57,7 @@ const Wishlist = () => {
           </button>
           <button
             className="btn btn-addCart"
-            onClick={() => addToCart(treatment._id)}
+            onClick={() => addToCart(treatment)}
           >
             Add to Cart
           </button>
