@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_WISHLIST } from "../utils/queries";
@@ -6,9 +6,11 @@ import { DEL_WISHLIST, ADD_ORDER } from "../utils/mutations";
 import { useDispatch } from "react-redux";
 
 const Wishlist = () => {
+  // fetch data from db
   const { data } = useQuery(QUERY_WISHLIST);
   const wishlistData = data?.wishlist.treatments ?? [];
 
+  // remove treatment from wishlist
   const [removeTreatmentFromWishlist] = useMutation(DEL_WISHLIST);
   const handleRemoveTreatment = async (treatment) => {
     try {
@@ -20,6 +22,23 @@ const Wishlist = () => {
     }
   };
 
+  // add treatment to cart
+  const dispatch = useDispatch();
+  const [addOrder] = useMutation(ADD_ORDER);
+  const addToCart = async (treatment) => {
+    await addOrder({
+      variables: {
+        treatment: treatment._id,
+      },
+    });
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: treatment,
+    });
+    console.log("added to cart");
+  };
+
+  // render wishlist items
   const wishlistCard = wishlistData.map((treatment) => {
     return (
       <div key={treatment._id} class="wishlist-card">
@@ -38,7 +57,7 @@ const Wishlist = () => {
           </button>
           <button
             className="btn btn-addCart"
-            // onClick={addCart}
+            onClick={() => addToCart(treatment)}
           >
             Add to Cart
           </button>
