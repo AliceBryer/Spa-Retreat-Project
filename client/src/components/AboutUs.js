@@ -46,14 +46,14 @@ const AboutUs = () => {
             ></img>
           </div>
           {/* Mohammeds card */}
-          <h1 className="about-name"> Mohammed Hassan </h1>
+          <h1 className="about-name"> Mohamed Hassan </h1>
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
               <a href="https://github.com/mohamedisaaq0">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/mohamedisaaq0">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: alicebryer123@icloud.com">
