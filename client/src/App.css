@@ -56,19 +56,25 @@ a:hover {
 .homepage-pic-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: left;
 }
 
 .welcome-pic {
-  height: 650px;
-  width: 460px;
+  height: 680px;
+  width: 480px;
 }
 
-.welcome-msg {
+.welcome-div {
   margin: auto;
-  font-family: "Qwitcher Grypen", cursive;
+}
+
+.welcome-title {
+  text-align: center;
   font-size: 100px;
+}
+
+.welcome-message {
+  font-size: 20px;
 }
 /* end of homepage css */
 
@@ -233,9 +239,6 @@ a:hover {
   .homepage-pic-container {
     align-items: center;
     justify-content: center;
-  }
-  .welcome-msg {
-    font-size: 80px;
   }
 
   .wishlist-container {
