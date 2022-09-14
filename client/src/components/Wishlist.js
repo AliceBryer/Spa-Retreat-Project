@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useQuery, useMutation } from "@apollo/client";
-// name of the functions to be edited after getting the code from backend team
 import { QUERY_WISHLIST } from "../utils/queries";
 import { DEL_WISHLIST } from "../utils/mutations";
 
@@ -12,7 +11,7 @@ const Wishlist = () => {
   const [removeTreatmentFromWishlist] = useMutation(DEL_WISHLIST);
   const handleRemoveTreatment = async (treatment) => {
     try {
-      const { data } = await removeTreatmentFromWishlist({
+      await removeTreatmentFromWishlist({
         variables: { treatment },
       });
     } catch (err) {
