@@ -105,6 +105,6 @@ dist
 
 # Misc:
 .vscode
-.DS_store/
+.DS_store
 
 build/
