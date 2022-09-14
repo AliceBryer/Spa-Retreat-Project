@@ -41,7 +41,7 @@ const TreatmentItem = () => {
       },
     });
     dispatch({
-      type: "ADD",
+      type: "ADD-TO-WISHLIST",
       payload: treatment,
     });
     console.log("added to wishlist");
