@@ -27,7 +27,19 @@ function Homepage() {
         <div>
           <img className="welcome-pic" src={currentImage} alt="spa pictures" />
         </div>
-        <div className="welcome-msg">Welcome</div>
+        <div className="welcome-div">
+          <div className="welcome-title">Welcome</div>
+          <br />
+          <div className="welcome-msg">
+            404 GETAWAY is proud to represent many of the finest country spa
+            facilities and treatments in the UK.
+            <br />
+            Whether you are searching for a romantic break, anniversary,
+            birthday celebration or just a weekend away,
+            <br />
+            we have the perfect offer for you.
+          </div>
+        </div>
       </div>
     </section>
   );
