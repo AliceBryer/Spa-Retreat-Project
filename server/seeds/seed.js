@@ -102,14 +102,14 @@ db.once("open", async () => {
       pictureURL:
         "https://media.istockphoto.com/photos/couple-massage-at-spa-resort-beautiful-couple-getting-a-back-massage-picture-id1336348648?k=20&m=1336348648&s=612x612&w=0&h=aLzVuCJQMnA3zMxl-PBirqJkJykZLCDhZNMvXq9aq5g=",
     },
-    {
-      name: "Couples pro-radiance facial",
-      description:
-        "This facial will rejuvenate your skin. It will energise & detoxify a stressed, dull skin with a nutritional superfood boost",
-      price: 100,
-      pictureURL:
-        "https://images.unsplash.com/photo-1643684391140-c5056cfd3436?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZmFjaWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
-    },
+    // {
+    //   name: "Couples pro-radiance facial",
+    //   description:
+    //     "This facial will rejuvenate your skin. It will energise & detoxify a stressed, dull skin with a nutritional superfood boost",
+    //   price: 100,
+    //   pictureURL:
+    //     "https://images.unsplash.com/photo-1643684391140-c5056cfd3436?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZmFjaWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    // },
   ]);
 
   console.log("Spa Data seeded!");
