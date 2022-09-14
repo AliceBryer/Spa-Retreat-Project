@@ -2,7 +2,8 @@ import React from "react";
 
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_WISHLIST } from "../utils/queries";
-import { DEL_WISHLIST } from "../utils/mutations";
+import { DEL_WISHLIST, ADD_ORDER } from "../utils/mutations";
+import { useDispatch } from "react-redux";
 
 const Wishlist = () => {
   const { data } = useQuery(QUERY_WISHLIST);
