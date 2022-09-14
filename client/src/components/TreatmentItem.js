@@ -55,12 +55,12 @@ const TreatmentItem = () => {
 
   const treatmentCard = treatmentsData.map((treatment) => {
     return (
-      <div className="single-treatment-item" key={treatment._id}>
-        <Card className="card" sx={{ maxWidth: 345 }}>
+      <div style={{ margin: 10 }} key={treatment._id}>
+        <Card sx={{ maxWidth: 345 }} style={{ height: "100%" }}>
           <CardMedia
             className="treatment-image"
             component="img"
-            height="340"
+            height="200"
             image={treatment.pictureURL}
             alt={treatment.name}
           />
@@ -77,9 +77,11 @@ const TreatmentItem = () => {
               className="treatment-description"
               variant="body2"
               color="text.secondary"
+              height="100"
             >
               {treatment.description}
             </Typography>
+            <br />
             <Typography
               className="treatment-price"
               variant="body2"
@@ -90,8 +92,7 @@ const TreatmentItem = () => {
           </CardContent>
           <CardActions className="icon-buttons">
             <Button size="small" onClick={() => addToWishlist(treatment)}>
-              {" "}
-              Add to wishlist{" "}
+              Add to wishlist
               <FontAwesomeIcon className="heart-icon" icon={faHeart} />{" "}
             </Button>
             <Button
@@ -100,8 +101,8 @@ const TreatmentItem = () => {
                 addToCart(treatment);
               }}
             >
-              Add to Basket{" "}
-              <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />{" "}
+              Add to Basket
+              <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
             </Button>
           </CardActions>
         </Card>
@@ -110,7 +111,6 @@ const TreatmentItem = () => {
   });
 
   return <div className="treatment-item-container">{treatmentCard}</div>;
-  // return <h1>Hello</h1>;
 };
 
 export default TreatmentItem;
