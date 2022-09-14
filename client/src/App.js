@@ -22,7 +22,6 @@ import Facilities from "./components/FacilitiesPage";
 import Footer from "./components/Footer";
 import TreatmentList from "./components/TreatmentList";
 import Wishlist from "./components/Wishlist";
-import About from "./components/About";
 import AboutUs from "./components/AboutUs";
 import MyAccount from "./components/MyAccount";
 import Cart from "./components/Cart";
@@ -68,7 +67,6 @@ function App() {
               <Route path="/treatment" element={<TreatmentList />} />
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/facilities" element={<Facilities />} />
-              <Route path="/about" element={<About />} />
               <Route path="/aboutUs" element={<AboutUs />} />
               <Route path="/myaccount" element={<MyAccount />} />
               <Route path="/cart" element={<Cart />} />
