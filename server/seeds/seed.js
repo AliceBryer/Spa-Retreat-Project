@@ -120,6 +120,20 @@ db.once("open", async () => {
 
   const faciltiies = await Facilities.insertMany([
     {
+      name: "Snooze Room",
+      description:
+        "Featuring atmospheric lighting and tranquil energy, the water beds are the ideal spots to truly switch off and unwind in silence.",
+      pictureURL:
+        "https://images.unsplash.com/photo-1535312800630-1c173409799a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+    {
+      name: "Hair & Spa Boutique",
+      description:
+        "Leave our spa looking your best as a great addition to your day ",
+      pictureURL:
+        "https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80",
+    },
+    {
       name: "Hydrotherapy Pool",
       description:
         "Heal tired muscles whilst lowering your stress levels, in our blissful hydrotherapy pool. Swim under our massage jets, or unwind in our bubbling hot tub. ",
@@ -147,20 +161,6 @@ db.once("open", async () => {
         "Kick back in our open plan area and make the most of our detoxing juices and healthy meals and snacks.",
       pictureURL:
         "https://images.unsplash.com/photo-1559625482-34b91d929ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    },
-    {
-      name: "Snooze Room",
-      description:
-        "Featuring atmospheric lighting and tranquil energy, the water beds are the ideal spots to truly switch off and unwind in silence.",
-      picture:
-        "https://images.unsplash.com/photo-1535312800630-1c173409799a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    },
-    {
-      name: "Hair & Spa Boutique",
-      description:
-        "Leave our spa looking your best as a great addition to your day. ",
-      picture:
-        "https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80",
     },
   ]);
 
