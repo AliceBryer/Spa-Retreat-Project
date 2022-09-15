@@ -82,6 +82,7 @@ export default function MyAccount() {
               variant="h6"
               align="left"
             >
+              {"First Name: "}
               {me.firstName}
             </Typography>
             <Typography
@@ -91,6 +92,7 @@ export default function MyAccount() {
               variant="h6"
               align="left"
             >
+              {"Last name: "}
               {me.lastName}
             </Typography>
             <Typography
@@ -100,6 +102,7 @@ export default function MyAccount() {
               variant="h6"
               align="left"
             >
+              {"Email: "}
               {me.email}
             </Typography>
             <Button
