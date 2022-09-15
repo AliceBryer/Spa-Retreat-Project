@@ -12,7 +12,7 @@ import Wrapper from "./components/Wrapper";
 import "./App.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import Reducer from "./components/Reducer";
+import Reducer from "./utils/reducer";
 
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";

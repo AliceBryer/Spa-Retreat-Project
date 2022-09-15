@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
+// const cartFromLocalStorage = JSON.parse(localStorage.getItem);
+
 const Cart = () => {
   const cart = useSelector((state) => state?.cart);
   console.log(cart);
@@ -11,6 +13,10 @@ const Cart = () => {
   const addition = (acc, currentValue) => {
     return acc + currentValue.price * currentValue.quantity;
   };
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => {
     if (!cart?.length) return false;
