@@ -54,26 +54,6 @@ const Cart = () => {
                   </button>
                 </div>
               </div>
-              <div>
-                {/* <button
-                  onClick={() => dispatch({ type: "INCREASE", payload: item })}
-                >
-                  +
-                </button>
-                <p>{item.quantity}</p>
-                <button
-                  onClick={() => {
-                    if (item.quantity > 1) {
-                      dispatch({ type: "DECREASE", payload: item });
-                    } else {
-                      dispatch({ type: "REMOVE", payload: item._id });
-                    }
-                  }}
-                >
-                  {" "}
-                  -{" "}
-                </button> */}
-              </div>
             </div>
           );
         })}
