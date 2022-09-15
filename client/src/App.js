@@ -10,13 +10,11 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-
 import Wrapper from "./components/Wrapper";
 import "./App.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./utils/reducer";
-
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import SignUp from "./components/Signup";
@@ -52,11 +50,14 @@ const persistConfig = {
   key: "root",
   storage,
 };
+
 const persistedReducer = persistReducer(persistConfig, reducer);
+
 const store = createStore(
   persistedReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
 const persistor = persistStore(store);
 
 function App() {
