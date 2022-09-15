@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
+  // const state = useSelector((state) => state);
   const cart = useSelector((state) => state?.cart);
   console.log(cart);
   const [total, setTotal] = useState(null);
@@ -17,6 +18,14 @@ const Cart = () => {
     setTotal(cart.reduce(addition, 0));
   }, [cart]);
 
+  function calculateTotal() {
+    let sum = 0;
+    cart.forEach((item) => {
+      sum += item.price * item.quantity;
+    });
+    return sum.toFixed(2);
+  }
+
   if (!cart?.length) return null;
   return (
     <div className="">
@@ -24,45 +33,35 @@ const Cart = () => {
       <div>
         {cart.map((item, index) => {
           return (
-            <div className="" key={index}>
+            <div className="wishlist-card" key={index}>
               <div>
-                <img src="" alt="" />
-                <h4>{item.name}</h4>
-                <p>Price : GBP{item.price}</p>
-                <p>Amount : GBP{item.price * item.quantity}</p>
-                <button
-                  onClick={() =>
-                    dispatch({ type: "REMOVE", payload: item._id })
-                  }
-                >
-                  Remove
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={() => dispatch({ type: "INCREASE", payload: item })}
-                >
-                  +
-                </button>
-                <p>{item.quantity}</p>
-                <button
-                  onClick={() => {
-                    if (item.quantity > 1) {
-                      dispatch({ type: "DECREASE", payload: item });
-                    } else {
-                      dispatch({ type: "REMOVE", payload: item._id });
+                <img
+                  className="treatment-img"
+                  src={item.pictureURL}
+                  alt="Treatment"
+                />
+                <h4 className="treatment-name">{item.name}</h4>
+                <p>Price : £{item.price}</p>
+                {/* <p>Amount : GBP{item.price * item.quantity}</p> */}
+                <div className="btn-container">
+                  <button
+                    className="btn btn-del"
+                    onClick={() =>
+                      dispatch({ type: "REMOVE", payload: item._id })
                     }
-                  }}
-                >
-                  {" "}
-                  -{" "}
-                </button>
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           );
         })}
       </div>
-      {total > 0 && <h2>Total : {total}</h2>}
+      {/* {total > 0 && <h2>Total : {total}</h2>} */}
+      <div className="flex-row space-between">
+        <strong>Total: £{calculateTotal()}</strong>
+      </div>
     </div>
   );
 };
