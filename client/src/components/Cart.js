@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
-
 const Cart = () => {
+  // const state = useSelector((state) => state);
   const cart = useSelector((state) => state?.cart);
   console.log(cart);
   const [total, setTotal] = useState(null);
@@ -15,13 +14,17 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
-  useEffect(() => {
     if (!cart?.length) return false;
     setTotal(cart.reduce(addition, 0));
   }, [cart]);
+
+  function calculateTotal() {
+    let sum = 0;
+    cart.forEach((item) => {
+      sum += item.price * item.quantity;
+    });
+    return sum.toFixed(2);
+  }
 
   if (!cart?.length) return null;
   return (
@@ -75,7 +78,10 @@ const Cart = () => {
           );
         })}
       </div>
-      {total > 0 && <h2>Total : {total}</h2>}
+      {/* {total > 0 && <h2>Total : {total}</h2>} */}
+      <div className="flex-row space-between">
+        <strong>Total: £{calculateTotal()}</strong>
+      </div>
     </div>
   );
 };

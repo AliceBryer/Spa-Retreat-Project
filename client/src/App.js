@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import { persistReducer, persistStore } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -12,7 +15,7 @@ import Wrapper from "./components/Wrapper";
 import "./App.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import Reducer from "./utils/reducer";
+import reducer from "./utils/reducer";
 
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
@@ -44,10 +47,17 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
+const persistedReducer = persistReducer(persistConfig, reducer);
 const store = createStore(
-  Reducer,
+  persistedReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+const persistor = persistStore(store);
 
 function App() {
   useEffect(() => {
@@ -57,23 +67,25 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Provider store={store}>
-        <Router>
-          <Header />
-          <Wrapper>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/treatment" element={<TreatmentList />} />
-              <Route path="/wishlist" element={<Wishlist />} />
-              <Route path="/facilities" element={<Facilities />} />
-              <Route path="/aboutUs" element={<AboutUs />} />
-              <Route path="/myaccount" element={<MyAccount />} />
-              <Route path="/cart" element={<Cart />} />
-            </Routes>
-          </Wrapper>
-          <Footer />
-        </Router>
+        <PersistGate loading={null} persistor={persistor}>
+          <Router>
+            <Header />
+            <Wrapper>
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/treatment" element={<TreatmentList />} />
+                <Route path="/wishlist" element={<Wishlist />} />
+                <Route path="/facilities" element={<Facilities />} />
+                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/myaccount" element={<MyAccount />} />
+                <Route path="/cart" element={<Cart />} />
+              </Routes>
+            </Wrapper>
+            <Footer />
+          </Router>
+        </PersistGate>
       </Provider>
     </ApolloProvider>
   );
