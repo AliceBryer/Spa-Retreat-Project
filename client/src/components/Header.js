@@ -41,9 +41,14 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav-list">
-                  <button className="logout-btn" onClick={Auth.logout}>
+                  {/* refresh the page when logged out */}
+                  <a
+                    href="/"
+                    className="logout-btn"
+                    onClick={() => Auth.logout()}
+                  >
                     Logout
-                  </button>
+                  </a>
                 </li>
               </>
             ) : (

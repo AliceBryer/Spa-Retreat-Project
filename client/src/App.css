@@ -192,8 +192,7 @@ Button,
   height: 100px;
 }
 
-/* contributors css */
-
+/* start of contributors css */
 .card-containers {
   display: flex;
   flex-wrap: wrap;
@@ -202,28 +201,29 @@ Button,
 }
 
 .about-person-card {
-  width: 320px;
-  height: 500px;
-  margin: 30px;
+  width: 280px;
+  height: 420px;
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
-  box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.2);
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 .person-image {
   border-radius: 100%;
   width: 150px;
   height: 150px;
-  margin: 30px;
-}
-
-.line-break {
-  box-shadow: 0px 3px 5px 1px rgb(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
 
 .about-link {
   cursor: pointer;
-  margin-top: 35px;
+  margin-top: 12px;
+  font-size: 13px;
 }
+/* end of contributors css */
 
 /* resposive */
 @media (max-width: 940px) {
