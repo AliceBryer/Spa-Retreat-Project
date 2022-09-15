@@ -28,7 +28,7 @@ import MyAccount from "./components/MyAccount";
 import Cart from "./components/Cart";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  uri: `${window.location.origin}/graphql`,
 });
 
 const authLink = setContext((_, { headers }) => {
