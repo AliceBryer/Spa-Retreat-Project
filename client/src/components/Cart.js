@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-// const cartFromLocalStorage = JSON.parse(localStorage.getItem);
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
 
 const Cart = () => {
   const cart = useSelector((state) => state?.cart);
@@ -30,22 +30,29 @@ const Cart = () => {
       <div>
         {cart.map((item, index) => {
           return (
-            <div className="" key={index}>
+            <div className="wishlist-card" key={index}>
               <div>
-                <img src="" alt="" />
-                <h4>{item.name}</h4>
-                <p>Price : GBP{item.price}</p>
-                <p>Amount : GBP{item.price * item.quantity}</p>
-                <button
-                  onClick={() =>
-                    dispatch({ type: "REMOVE", payload: item._id })
-                  }
-                >
-                  Remove
-                </button>
+                <img
+                  className="treatment-img"
+                  src={item.pictureURL}
+                  alt="Treatment"
+                />
+                <h4 className="treatment-name">{item.name}</h4>
+                <p>Price : £{item.price}</p>
+                {/* <p>Amount : GBP{item.price * item.quantity}</p> */}
+                <div className="btn-container">
+                  <button
+                    className="btn btn-del"
+                    onClick={() =>
+                      dispatch({ type: "REMOVE", payload: item._id })
+                    }
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
               <div>
-                <button
+                {/* <button
                   onClick={() => dispatch({ type: "INCREASE", payload: item })}
                 >
                   +
@@ -62,7 +69,7 @@ const Cart = () => {
                 >
                   {" "}
                   -{" "}
-                </button>
+                </button> */}
               </div>
             </div>
           );
