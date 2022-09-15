@@ -9,6 +9,10 @@ import {
 } from "@material-ui/core";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import { DEL_USER } from "../utils/mutations";
+import { QUERY_ME } from "../utils/queries";
+import { useQuery, useMutation } from "@apollo/client";
+import AuthService from "../utils/auth";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -29,12 +33,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const handleButtonClick = () => {
-  console.log("clicked");
-};
-
-export default function UserCard(props) {
+export default function MyAccount() {
   const classes = useStyles();
+  const {
+    data: { _id },
+  } = AuthService.getProfile();
+  console.log(_id);
+
+  const [deleteUser] = useMutation(DEL_USER);
+  const handleDeleteUser = async () => {
+    try {
+      await deleteUser({
+        variables: { id: _id },
+      });
+      AuthService.logout();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const { loading, data = {} } = useQuery(QUERY_ME);
+  const { me } = data;
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Card variant="outlined" className={classes.container}>
@@ -44,7 +67,7 @@ export default function UserCard(props) {
           <CardMedia align="left">
             <Avatar
               alt="Remy Sharp"
-              src={props?.content?.picture?.large}
+              src={me.profilePic}
               className={classes.large}
             />
           </CardMedia>
@@ -59,7 +82,7 @@ export default function UserCard(props) {
               variant="h6"
               align="left"
             >
-              {"First Name: Mohamed "}
+              {me.firstName}
             </Typography>
             <Typography
               id="myaccountdetailstext"
@@ -68,7 +91,7 @@ export default function UserCard(props) {
               variant="h6"
               align="left"
             >
-              {"First Name: Mohamed "}
+              {me.lastName}
             </Typography>
             <Typography
               id="myaccountdetailstext"
@@ -77,13 +100,13 @@ export default function UserCard(props) {
               variant="h6"
               align="left"
             >
-              {"Email: Mohamed@test.com "}
+              {me.email}
             </Typography>
             <Button
               variant="contained"
               sx={{ mt: 2, mb: 2 }}
               color="error"
-              onClick={handleButtonClick}
+              onClick={handleDeleteUser}
               size="large"
             >
               Delete Account

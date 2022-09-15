@@ -7,18 +7,7 @@ export const QUERY_ME = gql`
       firstName
       lastName
       email
-      orders {
-        _id
-        purchaseDate
-        user
-        treatments {
-          _id
-          name
-          description
-          pictureURL
-          price
-        }
-      }
+      profilePic
     }
   }
 `;
@@ -53,18 +42,6 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
-      orders {
-        _id
-        purchaseDate
-        user
-        treatments {
-          _id
-          name
-          description
-          pictureURL
-          price
-        }
-      }
     }
   }
 `;
