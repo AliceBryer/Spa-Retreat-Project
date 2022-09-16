@@ -6,6 +6,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
+    profilePic: String
   }
 
   type Order {
@@ -47,7 +48,7 @@ const typeDefs = gql`
     treatments: [Treatment]
     user: User
     order(_id: ID!): Order
-    wishlist(_id: ID!): Wishlist
+    wishlist: Wishlist
   }
 
   type Mutation {

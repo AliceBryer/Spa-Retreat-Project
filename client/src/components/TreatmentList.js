@@ -1,5 +1,5 @@
 import React from "react";
-import TreatmentItem from "../TreatmentItem/TreatmentItem";
+import TreatmentItem from "./TreatmentItem";
 
 function TreatmentList() {
   return (

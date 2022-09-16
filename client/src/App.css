@@ -25,6 +25,7 @@
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 8px;
   padding-left: 20px;
+  font-size: 25px;
 }
 
 .nav-bar {
@@ -49,50 +50,51 @@ a:hover {
   border-radius: 5px;
   transition: all 0.2s ease-out;
 }
-/* end of header css */
 
-/* start of footer css */
-.footer {
-  display: flex;
-  bottom: 0px;
-  padding-left: 10px;
-  width: 100%;
-  height: 7%;
-  margin: auto;
-  align-items: center;
-  background-color: #fff;
+.logout-btn {
+  border-style: none;
+  background-color: transparent;
+  text-decoration: none;
+  margin: 18px;
+  color: #000;
+  letter-spacing: 1px;
   font-size: 20px;
-  position: fixed;
+  align-items: center;
 }
 
-.footer-wrap {
-  display: inline-block;
-  margin-left: auto;
+.logout-btn:hover {
+  background-color: #e3d5ca;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 
-.footer-list {
-  list-style: none;
-  margin-right: 100px;
-}
-/* end of footer css */
+/* end of header css */
 
 /* start of homepage css */
 .homepage-pic-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: left;
 }
 
 .welcome-pic {
-  height: 650px;
-  width: 460px;
+  height: 680px;
+  width: 480px;
 }
 
-.welcome-msg {
+.welcome-div {
   margin: auto;
-  font-family: "Qwitcher Grypen", cursive;
+}
+
+.welcome-title {
+  text-align: center;
   font-size: 100px;
+}
+
+.welcome-message {
+  font-size: 20px;
 }
 /* end of homepage css */
 
@@ -102,41 +104,28 @@ a:hover {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 20px;
+  margin-bottom: 60px;
 }
 
-.single-treatment-item {
-  margin: 50px;
-  box-shadow: grey 6px 6px;
+.icon-buttons {
+  display: flex;
+  justify-content: center;
 }
 
-.treatment-card-content {
-  max-height: 700px;
-}
-
-.treatment-image {
-  object-fit: cover;
-}
-
-.treatment-price {
-  font-size: 500;
-  height: 250px;
-}
-
-.heart-icon {
-  margin-left: 8px;
-}
-
+Button,
+.heart-icon,
 .cart-icon {
   margin-left: 8px;
 }
 
 .heart-icon:hover {
   color: red;
+  transform: scale(1.5);
 }
 
 .cart-icon:hover {
-  color: rgb(3, 3, 117);
+  color: darkblue;
+  transform: scale(1.5);
 }
 /* end of treatment-item css */
 
@@ -203,8 +192,7 @@ a:hover {
   height: 100px;
 }
 
-/* contributors css */
-
+/* start of contributors css */
 .card-containers {
   display: flex;
   flex-wrap: wrap;
@@ -213,43 +201,77 @@ a:hover {
 }
 
 .about-person-card {
-  width: 320px;
-  height: 500px;
-  margin: 30px;
+  width: 280px;
+  height: 420px;
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
-  box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.2);
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 .person-image {
   border-radius: 100%;
   width: 150px;
   height: 150px;
-  margin: 30px;
-}
-
-.line-break {
-  box-shadow: 0px 3px 5px 1px rgb(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
 
 .about-link {
   cursor: pointer;
-  margin-top: 35px;
+  margin-top: 12px;
+  font-size: 13px;
 }
+/* end of contributors css */
 
 /* resposive */
-@media (max-width: 800px) {
-  .nav-list {
-    display: block;
-  }
-  .homepage-pic-container {
+@media (max-width: 940px) {
+  .header {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .welcome-msg {
-    font-size: 80px;
+
+  .company-name {
+    border-bottom: #000 3px solid;
+    font-size: 30px;
+  }
+  .nav-bar {
+    margin: auto;
+  }
+
+  .homepage-pic-container {
+    align-items: center;
+    justify-content: center;
   }
 
   .wishlist-container {
     flex-direction: column;
   }
+}
+
+/* My account css styling */
+
+#myaccountitle {
+  text-align: center;
+  padding-top: 75px;
+  text-decoration: underline;
+  font-size: 35px;
+}
+
+#myaccountprofilepic {
+  padding-top: 100px;
+  padding-left: 250px;
+}
+
+#myaccountdetails {
+  padding-top: 150px;
+  padding-left: 50px;
+}
+
+#myaccountdetailstext {
+  font-size: 26px;
 }

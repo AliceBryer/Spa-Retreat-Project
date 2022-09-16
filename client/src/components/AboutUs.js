@@ -1,13 +1,14 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-
-// import Auth from "../utils/auth";
-// import { useMutation } from "@apollo/client";
 
 const AboutUs = () => {
   return (
     <>
+      <div>
+        <h2 className="title">CONTRIBUTORS</h2>
+      </div>
       <div className="card-containers">
         {/* Angelas card */}
         <div className="about-person-card">
@@ -20,23 +21,39 @@ const AboutUs = () => {
               height="600"
             ></img>
           </div>
-
           <h1 className="about-name"> Angela Wong </h1>
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/angelawong3">Github </a>{" "}
+              <a
+                href="https://github.com/angelawong3"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/angelawong3/">LinkedIn </a>{" "}
+              <a
+                href="https://www.linkedin.com/in/angelawong3/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a
+                href="mailto: angelawong3@yahoo.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
+        {/* Mohameds card */}
         <div className="about-person-card">
           <div>
             <img
@@ -47,24 +64,40 @@ const AboutUs = () => {
               height="600"
             ></img>
           </div>
-          {/* Mohammeds card */}
-          <h1 className="about-name"> Mohammed Hassan </h1>
+          <h1 className="about-name"> Mohamed Hassan </h1>
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/mohamedisaaq0">Github </a>{" "}
+              <a
+                href="https://github.com/mohamedisaaq0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/mohamedisaaq0/">LinkedIn </a>{" "}
+              <a
+                href="https://www.linkedin.com/in/mohamedisaaq0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a
+                href="mailto: alicebryer123@icloud.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
 
+        {/* keyurs card */}
         <div className="about-person-card">
           <div>
             <img
@@ -75,21 +108,35 @@ const AboutUs = () => {
               height="600"
             ></img>
           </div>
-          {/* keyurs card */}
-
           <h1 className="about-name"> Keyur Mistry </h1>
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/keyurmist">Github </a>{" "}
+              <a
+                href="https://github.com/keyurmist"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="">LinkedIn </a>{" "}
+              <a
+                href="https://www.linkedin.com/in/alicebryer123/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a
+                href="mailto: alicebryer123@icloud.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
@@ -109,15 +156,31 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/AliceBryer">Github </a>{" "}
+              <a
+                href="https://github.com/AliceBryer"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a
+                href="https://www.linkedin.com/in/alicebryer123/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a
+                href="mailto: alicebryer123@icloud.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
@@ -137,15 +200,23 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/Ahmeds226">Github </a>{" "}
+              <a
+                href="https://github.com/Ahmeds226"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/ahmed-shahnawaz-a869791bb/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/ahmed-shahnawaz-a869791bb/">
+                LinkedIn{" "}
+              </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: iahmed.s1@icloud.com">
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
@@ -166,15 +237,23 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/AliceBryer">Github </a>{" "}
+              <a
+                href="https://github.com/AliceBryer"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/aisha-abdi-30674423a/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/aisha-abdi-30674423a/">
+                LinkedIn{" "}
+              </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: aishahajisirad@gmail.com">
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
@@ -194,15 +273,23 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/iosman11">Github </a>{" "}
+              <a
+                href="https://github.com/iosman11"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/idil-osman-bb6ba4240/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/idil-osman-bb6ba4240/">
+                LinkedIn{" "}
+              </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: Idil_abukar@live.se">
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
@@ -221,15 +308,23 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/aali9">Github </a>{" "}
+              <a
+                href="https://github.com/aali9"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/anfal-ali-75373483/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/anfal-ali-75373483/">
+                LinkedIn{" "}
+              </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: Anfal.ali_@hotmail.co.uk">
                 <FontAwesomeIcon icon={faAt} /> Email
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>

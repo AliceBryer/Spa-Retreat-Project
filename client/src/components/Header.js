@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@mui/material";
 
 import Auth from "../utils/auth";
 
@@ -24,12 +23,6 @@ const Header = () => {
             <li className="nav-list">
               <NavLink to="/treatment">Treatment</NavLink>
             </li>
-
-            {/* Wishlist for testing purpose */}
-            <li className="nav-list">
-              <NavLink to="/wishlist">Wishlist</NavLink>
-            </li>
-
             <li className="nav-list">
               <NavLink to="/aboutus">Contributors</NavLink>
             </li>
@@ -43,13 +36,19 @@ const Header = () => {
                   <NavLink to="/wishlist">Wishlist</NavLink>
                 </li>
                 <li className="nav-list">
-                  <NavLink to="/basket">
+                  <NavLink to="/cart">
                     <FontAwesomeIcon icon={faCartShopping} />
-                    &nbsp;
                   </NavLink>
                 </li>
                 <li className="nav-list">
-                  <Button onClick={Auth.logout}>Logout</Button>
+                  {/* refresh the page when logged out */}
+                  <a
+                    href="/"
+                    className="logout-btn"
+                    onClick={() => Auth.logout()}
+                  >
+                    Logout
+                  </a>
                 </li>
               </>
             ) : (
