@@ -28,41 +28,49 @@ const Cart = () => {
 
   if (!cart?.length) return null;
   return (
-    <div className="">
+    <>
+      <div>
+        <h2 className="title">CART</h2>
+      </div>
       <Link to=""></Link>
       <div>
         {cart.map((item, index) => {
           return (
-            <div className="wishlist-card" key={index}>
-              <div>
+            <div key={index} className="cart-container">
+              <div className="cart-item">
                 <img
-                  className="treatment-img"
+                  className="cart-item-img"
                   src={item.pictureURL}
                   alt="Treatment"
                 />
-                <h4 className="treatment-name">{item.name}</h4>
-                <p>Price : £{item.price}</p>
-                {/* <p>Amount : GBP{item.price * item.quantity}</p> */}
-                <div className="btn-container">
-                  <button
-                    className="btn btn-del"
-                    onClick={() =>
-                      dispatch({ type: "REMOVE", payload: item._id })
-                    }
-                  >
-                    Remove
-                  </button>
-                </div>
+              </div>
+              <div className="cart-item">
+                <h4 className="cart-item-name">{item.name}</h4>
+              </div>
+              <div className="cart-item">
+                <p className="cart-item-price">Price : £{item.price}</p>
+              </div>
+              {/* <p>Amount : GBP{item.price * item.quantity}</p> */}
+              <div className="cart-item">
+                <button
+                  className="btn btn-del"
+                  onClick={() =>
+                    dispatch({ type: "REMOVE", payload: item._id })
+                  }
+                >
+                  Remove
+                </button>
               </div>
             </div>
           );
         })}
+
+        {/* {total > 0 && <h2>Total : {total}</h2>} */}
+        <div className="cart-total-price">
+          <strong>Total: £{calculateTotal()}</strong>
+        </div>
       </div>
-      {/* {total > 0 && <h2>Total : {total}</h2>} */}
-      <div className="flex-row space-between">
-        <strong>Total: £{calculateTotal()}</strong>
-      </div>
-    </div>
+    </>
   );
 };
 
