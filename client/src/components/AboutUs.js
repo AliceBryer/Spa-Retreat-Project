@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faLinkedin } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUs = () => {
   return (
@@ -48,7 +48,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faAt} /> Email
+                Email
               </a>
             </p>
           </div>
@@ -91,7 +91,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faAt} /> Email
+                Email
               </a>
             </p>
           </div>
@@ -135,7 +135,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faAt} /> Email
+                Email
               </a>
             </p>
           </div>
@@ -179,7 +179,7 @@ const AboutUs = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faAt} /> Email
+                Email
               </a>
             </p>
           </div>
@@ -214,9 +214,7 @@ const AboutUs = () => {
               </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: iahmed.s1@icloud.com">
-                <FontAwesomeIcon icon={faAt} /> Email
-              </a>
+              <a href="mailto: iahmed.s1@icloud.com">Email</a>
             </p>
           </div>
         </div>
@@ -251,9 +249,7 @@ const AboutUs = () => {
               </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: aishahajisirad@gmail.com">
-                <FontAwesomeIcon icon={faAt} /> Email
-              </a>
+              <a href="mailto: aishahajisirad@gmail.com">Email</a>
             </p>
           </div>
         </div>
@@ -287,9 +283,7 @@ const AboutUs = () => {
               </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: Idil_abukar@live.se">
-                <FontAwesomeIcon icon={faAt} /> Email
-              </a>
+              <a href="mailto: Idil_abukar@live.se">Email</a>
             </p>
           </div>
         </div>
@@ -322,9 +316,7 @@ const AboutUs = () => {
               </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: Anfal.ali_@hotmail.co.uk">
-                <FontAwesomeIcon icon={faAt} /> Email
-              </a>
+              <a href="mailto: Anfal.ali_@hotmail.co.uk">Email</a>
             </p>
           </div>
         </div>
