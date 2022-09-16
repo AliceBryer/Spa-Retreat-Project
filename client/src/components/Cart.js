@@ -18,13 +18,13 @@ const Cart = () => {
     setTotal(cart.reduce(addition, 0));
   }, [cart]);
 
-  function calculateTotal() {
-    let sum = 0;
-    cart.forEach((item) => {
-      sum += item.price * item.quantity;
-    });
-    return sum.toFixed(2);
-  }
+  // function calculateTotal() {
+  //   let sum = 0;
+  //   cart.forEach((item) => {
+  //     sum += item.price * item.quantity;
+  //   });
+  //   return sum.toFixed(2);
+  // }
 
   if (!cart?.length) return null;
   return (
@@ -59,9 +59,9 @@ const Cart = () => {
         })}
       </div>
       {/* {total > 0 && <h2>Total : {total}</h2>} */}
-      <div className="flex-row space-between">
+      {/* <div className="flex-row space-between">
         <strong>Total: £{calculateTotal()}</strong>
-      </div>
+      </div> */}
     </div>
   );
 };
