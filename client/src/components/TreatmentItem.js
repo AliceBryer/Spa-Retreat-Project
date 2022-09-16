@@ -101,7 +101,7 @@ const TreatmentItem = () => {
                 addToCart(treatment);
               }}
             >
-              Add to Basket
+              Add to Cart
               <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
             </Button>
           </CardActions>
