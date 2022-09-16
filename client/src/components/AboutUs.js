@@ -87,7 +87,7 @@ const AboutUs = () => {
             </p>
             <p className="about-link">
               <a
-                href="mailto: alicebryer123@icloud.com"
+                href="mailto: mohamedisaaq0@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -122,7 +122,7 @@ const AboutUs = () => {
             </p>
             <p className="about-link">
               <a
-                href="https://www.linkedin.com/in/alicebryer123/"
+                href="https://www.linkedin.com/in/keyur-mistry-15a303235"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -131,7 +131,7 @@ const AboutUs = () => {
             </p>
             <p className="about-link">
               <a
-                href="mailto: alicebryer123@icloud.com"
+                href="mailto: keyurmist@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -238,7 +238,7 @@ const AboutUs = () => {
           <div className="links">
             <p className="about-link">
               <a
-                href="https://github.com/AliceBryer"
+                href="https://github.com/Aishaabdi1"
                 target="_blank"
                 rel="noreferrer"
               >
