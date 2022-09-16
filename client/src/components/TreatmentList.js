@@ -5,7 +5,7 @@ function TreatmentList() {
   return (
     <>
       <div>
-        <h2 className="title">TREATMENT</h2>
+        <h2 className="title">TREATMENTS</h2>
       </div>
       <div>
         <TreatmentItem />
