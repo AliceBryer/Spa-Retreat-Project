@@ -185,6 +185,11 @@ Button,
 .facilities-card {
   margin: 40px;
   margin-bottom: 70px;
+  transition: transform 0.2s;
+}
+
+.facilities-card:hover {
+  transform: scale(1.1);
 }
 
 .facilities-card-content {
