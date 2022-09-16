@@ -66,7 +66,7 @@ export default function MyAccount() {
         <Grid item xs={4} id="myaccountprofilepic">
           <CardMedia align="left">
             <Avatar
-              alt="Remy Sharp"
+              alt="avatar of account owner"
               src={me.profilePic}
               className={classes.large}
             />
