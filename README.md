@@ -59,6 +59,12 @@ npm run develop
 
 ## Screenshots
 
+![Alt Text](./assets-README/spa-retreat-gif.gif)
+
+![Alt Text](./assets-README/Screenshot%202022-09-16%20202457.jpg)
+
+![Alt Text](./assets-README/Screenshot%202022-09-16%20202409.jpg)
+
 ## Contributing
 
 If you would like to contribute on this project at all, please contact anyone of us via email or phone. All personal details are in our 'contributors' page.
@@ -66,6 +72,7 @@ If you would like to contribute on this project at all, please contact anyone of
 ## Deployed Link
 
 ```
+https://spa-retreat-app.herokuapp.com/
 
 ```
 
