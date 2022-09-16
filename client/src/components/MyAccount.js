@@ -61,7 +61,7 @@ export default function MyAccount() {
 
   return (
     <Card variant="outlined" className={classes.container}>
-      <h1 id="myaccountitle">My Account:</h1>
+      <h1 className="myaccountitle">MY ACCOUNT</h1>
       <Grid container spacing={2}>
         <Grid item xs={4} id="myaccountprofilepic">
           <CardMedia align="left">

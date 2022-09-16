@@ -268,11 +268,11 @@ Button,
 }
 
 /* start of my account css styling */
-#myaccountitle {
+.myaccountitle {
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
-  padding-top: 75px;
-  text-decoration: underline;
-  font-size: 35px;
+  letter-spacing: 3px;
+  font-size: 26px;
 }
 
 #myaccountprofilepic {
