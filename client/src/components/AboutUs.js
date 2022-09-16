@@ -25,10 +25,10 @@ const AboutUs = () => {
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
-              <a href="https://github.com/AliceBryer">Github </a>{" "}
+              <a href="https://github.com/angelawong3">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/angelawong3/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: alicebryer123@icloud.com">
@@ -55,7 +55,7 @@ const AboutUs = () => {
               <a href="https://github.com/mohamedisaaq0">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/mohamedisaaq0/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: alicebryer123@icloud.com">
@@ -84,7 +84,7 @@ const AboutUs = () => {
               <a href="https://github.com/keyurmist">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
               <a href="mailto: alicebryer123@icloud.com">
@@ -140,10 +140,10 @@ const AboutUs = () => {
               <a href="https://github.com/Ahmeds226">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/ahmed-shahnawaz-a869791bb/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a href="mailto: iahmed.s1@icloud.com">
                 <FontAwesomeIcon icon={faAt} /> Email
               </a>{" "}
             </p>
@@ -162,17 +162,17 @@ const AboutUs = () => {
 
           {/* Aishas card */}
 
-          <h1 className="about-name"> Aisha Abdirahman</h1>
+          <h1 className="about-name"> Aisha Abdi</h1>
           <hr className="line-break"></hr>
           <div className="links">
             <p className="about-link">
               <a href="https://github.com/AliceBryer">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/aisha-abdi-30674423a/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a href="mailto: aishahajisirad@gmail.com">
                 <FontAwesomeIcon icon={faAt} /> Email
               </a>{" "}
             </p>
@@ -197,10 +197,10 @@ const AboutUs = () => {
               <a href="https://github.com/iosman11">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/idil-osman-bb6ba4240/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a href="mailto: Idil_abukar@live.se">
                 <FontAwesomeIcon icon={faAt} /> Email
               </a>{" "}
             </p>
@@ -224,10 +224,10 @@ const AboutUs = () => {
               <a href="https://github.com/aali9">Github </a>{" "}
             </p>
             <p className="about-link">
-              <a href="https://www.linkedin.com/in/alicebryer123/">LinkedIn </a>{" "}
+              <a href="https://www.linkedin.com/in/anfal-ali-75373483/">LinkedIn </a>{" "}
             </p>
             <p className="about-link">
-              <a href="mailto: alicebryer123@icloud.com">
+              <a href="mailto: Anfal.ali_@hotmail.co.uk">
                 <FontAwesomeIcon icon={faAt} /> Email
               </a>{" "}
             </p>
