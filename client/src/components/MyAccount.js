@@ -60,8 +60,8 @@ export default function MyAccount() {
   }
 
   return (
-    <Card variant="outlined" className={classes.container}>
-      <h1 className="myaccountitle">MY ACCOUNT</h1>
+    <Card variant="outlined" className="my-account">
+      <h1 className="my-account-title">MY ACCOUNT</h1>
       <Grid container spacing={2}>
         <Grid item xs={4} id="myaccountprofilepic">
           <CardMedia align="left">
@@ -83,7 +83,7 @@ export default function MyAccount() {
               align="left"
             >
               {"First Name: "}
-              {me.firstName}
+              <span className="italics">{me.firstName}</span>
             </Typography>
             <Typography
               id="myaccountdetailstext"
@@ -93,7 +93,7 @@ export default function MyAccount() {
               align="left"
             >
               {"Last name: "}
-              {me.lastName}
+              <span className="italics">{me.lastName}</span>
             </Typography>
             <Typography
               id="myaccountdetailstext"
@@ -102,8 +102,8 @@ export default function MyAccount() {
               variant="h6"
               align="left"
             >
-              {"Email: "}
-              {me.email}
+              {"Email:  "}
+              <span className="italics">{me.email}</span>
             </Typography>
             <Button
               variant="contained"
