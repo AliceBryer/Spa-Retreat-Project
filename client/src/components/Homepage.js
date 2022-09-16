@@ -30,14 +30,13 @@ function Homepage() {
         <div className="welcome-div">
           <div className="welcome-title">Welcome</div>
           <br />
-          <div className="welcome-msg">
-            404 GETAWAY is proud to represent many of the finest country spa
-            facilities and treatments in the UK.
-            <br />
-            Whether you are searching for a romantic break, anniversary,
-            birthday celebration or just a weekend away,
-            <br />
-            we have the perfect offer for you.
+          <div>
+            <p className="welcome-msg">
+              404 GETAWAY is proud to represent many of the finest country spa
+              facilities and treatments in the UK. Whether you are searching for
+              a romantic break, anniversary, birthday celebration or just a
+              weekend away, we have the perfect offer for you.
+            </p>
           </div>
         </div>
       </div>

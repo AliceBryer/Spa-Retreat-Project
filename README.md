@@ -4,6 +4,7 @@ Our Spa retreat project is based on our make believe spa '404GETAWAY'. A MERN st
 
 ## User Story
 
+```
 AS A USER
 I want to view the facilities and treatments at '404GETAWAY'
 SO THAT I can keep a list of treatments to purchase
@@ -12,6 +13,7 @@ WHEN I am logged in to the site
 I will be able to view and delete my account
 I will be able to to save and retrieve treatments from my wishlist
 I will be able to to add items to my cart
+```
 
 ## Table of Contents
 
@@ -54,16 +56,17 @@ npm install
 ## Usage
 
 ```
+npm run seed
 npm run develop
 ```
 
 ## Screenshots
 
-![Alt Text](./assets-README/spa-retreat-gif.gif)
+![app-gif](./client/src/img/spa-retreat-gif.gif)
 
-![Alt Text](./assets-README/Screenshot%202022-09-16%20202457.jpg)
+![UI1](./client/src/img/UI1.jpg)
 
-![Alt Text](./assets-README/Screenshot%202022-09-16%20202409.jpg)
+![UI2](./client/src/img/UI2.jpg)
 
 ## Contributing
 
